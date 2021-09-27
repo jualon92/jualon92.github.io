@@ -140,7 +140,8 @@ body {
 /*********************************
             HEADER
 *********************************/
-.main-header { /*flex permite reacomodar flow al bajar resolucion */
+.main-header {
+  /*flex permite reacomodar flow al bajar resolucion mediante media */
   display: flex;
   flex-direction: column;
 }
@@ -158,24 +159,23 @@ body {
 }
 
 /*********************************
-            NAV BAR
-*********************************/
+              NAV BAR
+  *********************************/
 .nav-bar {
   background-color: mediumturquoise;
 }
-
-.nav-bar__nav-list { /*con flex requiere menos codigo*/
+.nav-bar__nav-list {
+  /*con flex requiere menos codigo*/
   display: flex;
   list-style-type: none;
   justify-content: center;
 }
-
 .nav-bar__nav-item {
   text-align: center;
   background-color: pink;
 }
-
-.nav-bar__nav-link { /*inline no muestra padding top padding bottom*/
+.nav-bar__nav-link {
+  /*inline no muestra padding top padding bottom*/
   display: block;
   background-color: purple;
   color: #fff;
@@ -184,51 +184,43 @@ body {
 }
 
 /*********************************
-            SEARCH BAR
-*********************************/
+              SEARCH BAR
+  *********************************/
 .search-bar {
   background-color: olivedrab;
   display: flex;
   justify-content: space-between;
 }
-
-.search-bar__logo-container,
-.search-bar__form-container {
+.search-bar__logo-container, .search-bar__form-container {
   padding: 1em;
 }
-
 .search-bar__logo-container {
   background-color: yellow;
 }
-
 .search-bar__form-container {
   background-color: gold;
   flex-basis: 100%;
   display: flex;
   justify-content: center;
 }
-
 .search-bar__form-label {
   background-color: greenyellow;
 }
-
 .search-bar__form-search {
   background-color: deeppink;
   width: 70%;
 }
-
 .search-bar__form-submit {
   background-color: darkslategray;
 }
-
 .search-bar__carrito-container {
   flex: 0 0 3em;
   background-color: goldenrod;
 }
 
 /*********************************
-            MENU TOGGLE
-*********************************/
+              MENU TOGGLE
+  *********************************/
 .menu-toggle {
   display: none;
   background-color: red;
@@ -236,17 +228,13 @@ body {
   position: relative;
   cursor: pointer;
 }
-
 .menu-toggle__label {
   display: block;
   background-color: black;
   width: 100%;
   height: 100%;
 }
-
-.menu-toggle__pan-arriba,
-.menu-toggle__medallon,
-.menu-toggle__pan-abajo {
+.menu-toggle__pan-arriba, .menu-toggle__medallon, .menu-toggle__pan-abajo {
   display: block;
   background-color: #333;
   height: 0.2em;
@@ -255,21 +243,19 @@ body {
   right: 0.5em;
   margin: 0 auto;
 }
-
 .menu-toggle__pan-arriba {
   top: 0.8em;
 }
-
 .menu-toggle__medallon {
   top: 50%;
   margin-top: -0.15em;
 }
-
 .menu-toggle__pan-abajo {
   bottom: 0.8em;
 }
 
-@media (max-width: 768px) { /* hasta 768px hace esto*/
+@media (max-width: 768px) {
+  /* hasta 768px hace esto*/
   .main-header {
     flex-direction: column-reverse;
   }

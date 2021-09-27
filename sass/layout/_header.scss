@@ -1,151 +1,151 @@
 /*********************************
             HEADER
 *********************************/
-.main-header {
-    display: flex;
-    flex-direction: column;
+.main-header {/*flex permite reacomodar flow al bajar resolucion mediante media */
+  display: flex;
+  flex-direction: column;
 }
 
 #menu {
-    display: none;
+  display: none;
 }
 
 #menu:checked + .nav-bar {
-    display: block;
-}
+  display: block;
+} 
 
 #menu:checked ~ .search-bar .menu-toggle__label {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 /*********************************
-            NAV BAR
-*********************************/
+              NAV BAR
+  *********************************/
 .nav-bar {
-    background-color: mediumturquoise;
-}
+  background-color: mediumturquoise;
 
-.nav-bar__nav-list {
+  &__nav-list {
+    /*con flex requiere menos codigo*/
     display: flex;
     list-style-type: none;
     justify-content: center;
-}
+  }
 
-.nav-bar__nav-item {
+  &__nav-item {
     text-align: center;
     background-color: pink;
-}
+  }
 
-.nav-bar__nav-link {
+  &__nav-link {
+    /*inline no muestra padding top padding bottom*/
     display: block;
     background-color: purple;
     color: #fff;
     padding: 1em 2em;
     text-decoration: none;
+  }
 }
-
 
 /*********************************
-            SEARCH BAR
-*********************************/
+              SEARCH BAR
+  *********************************/
 .search-bar {
-    background-color: olivedrab;
-    display: flex;
-    justify-content: space-between;
-}
+  background-color: olivedrab;
+  display: flex;
+  justify-content: space-between;
 
-.search-bar__logo-container,
-.search-bar__form-container {
+  &__logo-container,
+  &__form-container {
     padding: 1em;
-}
+  }
 
-.search-bar__logo-container {
+  &__logo-container {
     background-color: yellow;
-}
+  }
 
-.search-bar__form-container {
+  &__form-container {
     background-color: gold;
     flex-basis: 100%;
     display: flex;
     justify-content: center;
-}
+  }
 
-.search-bar__form-label {
+  &__form-label {
     background-color: greenyellow;
-}
+  }
 
-.search-bar__form-search {
+  &__form-search {
     background-color: deeppink;
     width: 70%;
-}
+  }
 
-.search-bar__form-submit {
+  &__form-submit {
     background-color: darkslategray;
-}
+  }
 
-.search-bar__carrito-container {
+  &__carrito-container {
     flex: 0 0 3em;
     background-color: goldenrod;
+  }
 }
-
 
 /*********************************
-            MENU TOGGLE
-*********************************/
+              MENU TOGGLE
+  *********************************/
 .menu-toggle {
-    display: none;
-    background-color: red;
-    flex: 0 0 3em;
-    position: relative;
-    cursor: pointer;
-}
+  display: none;
+  background-color: red;
+  flex: 0 0 3em;
+  position: relative;
+  cursor: pointer;
 
-.menu-toggle__label {
+  &__label {
     display: block;
     background-color: black;
     width: 100%;
     height: 100%;
-}
+  }
 
-.menu-toggle__pan-arriba,
-.menu-toggle__medallon,
-.menu-toggle__pan-abajo {
+  &__pan-arriba,
+  &__medallon,
+  &__pan-abajo {
     display: block;
     background-color: #333;
-    height: .2em;
+    height: 0.2em;
     position: absolute;
-    left: .5em;
-    right: .5em;
+    left: 0.5em;
+    right: 0.5em;
     margin: 0 auto;
-}
+  }
 
-.menu-toggle__pan-arriba {
-    top: .8em;
-}
-.menu-toggle__medallon {
+  &__pan-arriba {
+    top: 0.8em;
+  }
+
+  &__medallon {
     top: 50%;
-    margin-top: -.15em;
-}
-.menu-toggle__pan-abajo {
-    bottom: .8em;
-}
+    margin-top: -0.15em;
+  }
 
+  &__pan-abajo {
+    bottom: 0.8em;
+  }
+}
 @media (max-width: 768px) {
+  /* hasta 768px hace esto*/
+  .main-header {
+    flex-direction: column-reverse;
+  }
 
-    .main-header {
-        flex-direction: column-reverse;
-    }
+  .menu-toggle {
+    display: block;
+  }
 
-    .menu-toggle {
-        display: block;
-    }
+  .nav-bar {
+    display: none;
+  }
 
-    .nav-bar {
-        display: none;
-    }
-
-    .nav-bar__nav-list {
-        flex-direction: column;
-    }
-
+  .nav-bar__nav-list {
+    flex-direction: column;
+  }
 }
