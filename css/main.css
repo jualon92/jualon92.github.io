@@ -140,7 +140,7 @@ body {
 /*********************************
             HEADER
 *********************************/
-.main-header {
+.main-header { /*flex permite reacomodar flow al bajar resolucion */
   display: flex;
   flex-direction: column;
 }
@@ -164,7 +164,7 @@ body {
   background-color: mediumturquoise;
 }
 
-.nav-bar__nav-list {
+.nav-bar__nav-list { /*con flex requiere menos codigo*/
   display: flex;
   list-style-type: none;
   justify-content: center;
@@ -175,7 +175,7 @@ body {
   background-color: pink;
 }
 
-.nav-bar__nav-link {
+.nav-bar__nav-link { /*inline no muestra padding top padding bottom*/
   display: block;
   background-color: purple;
   color: #fff;
@@ -269,7 +269,7 @@ body {
   bottom: 0.8em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* hasta 768px hace esto*/
   .main-header {
     flex-direction: column-reverse;
   }
