@@ -30,14 +30,14 @@
     &__image {
         background-size: cover;
         height: 200px;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px); 
         clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
         background-position: center;
         transition: all .2s;
     }
 
     &:hover &__image {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px); 
         clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px);
         transform: scale(1.1) rotate(-2deg);
         transition-delay: 0s;
