@@ -1,4 +1,8 @@
- 
+$rosado:deeppink; 
+$violeta:purple;
+$rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reutilizable*/
+
+
 /*********************************
             HEADER
 *********************************/
@@ -23,27 +27,30 @@
               NAV BAR
   *********************************/
 .nav-bar {
-  background-color: mediumturquoise;
+     
+    background-color: mediumturquoise;
 
-  &__nav-list {
-    /*con flex requiere menos codigo*/
+  &__nav-list { /*con flex requiere menos codigo*/
     display: flex;
     list-style-type: none;
     justify-content: center;
   }
 
-  &__nav-item {
+  /*&__nav-item {
     text-align: center;
-    background-color: pink;
-  }
+    background-color: pink; 
+  }*/
 
-  &__nav-link {
-    /*inline no muestra padding top padding bottom*/
+  &__nav-link { /*inline no muestra padding top padding bottom*/
     display: block;
-    background-color: purple;
+    background-color: $violeta;
     color: #fff;
     padding: 1em 2em;
     text-decoration: none;
+  }
+
+  &__nav-link:hover, &__nav-link:focus{   //que marque cual elijo  
+    background-color: $rojo-apagado;
   }
 }
 
@@ -51,13 +58,15 @@
               SEARCH BAR
   *********************************/
 .search-bar {
+  //$color-casero: white; /*mas facil de cambiar, scope local, preguntar*/
   background-color: olivedrab;
   display: flex;
   justify-content: space-between;
 
+
   &__logo-container,
   &__form-container {
-    padding: 1em;
+    padding: 0.65em;
   }
 
   &__logo-container {
@@ -76,8 +85,13 @@
   }
 
   &__form-search {
-    background-color: deeppink;
-    width: 70%;
+    background-color:$rosado;
+    width: 90%;
+
+    /*
+    &:hover, &:focus{  
+        background-color:hsl(328, 100%, 30%);
+    }*/
   }
 
   &__form-submit {
@@ -85,9 +99,30 @@
   }
 
   &__carrito-container {
-    flex: 0 0 3em;
-    background-color: goldenrod;
+    display:flex;
+      flex: 0 0 5em;
+      background-color: goldenrod;
+      
   }
+
+  &__carrito-img{
+      
+       max-width:100%; 
+  }
+
+  &__search-bar__carrito-link{
+      display:flex;
+  }
+}
+
+.search-bar__form-search{ /* prefiero que no este nesteado en .search-bar*/
+   &:focus{
+       filter:brightness(60%); /*si se cambia el color de barra busqueda, brigthness lo cambia*/
+    }
+    &::placeholder{
+        font-style: bold;
+        color:black;
+    }
 }
 
 /*********************************
@@ -132,8 +167,7 @@
     bottom: 0.8em;
   }
 }
-@media (max-width: 768px) {
-  /* hasta 768px hace esto*/
+@media (max-width: 768px) { /* hasta 768px hace esto*/
   .main-header {
     flex-direction: column-reverse;
   }
@@ -150,3 +184,27 @@
     flex-direction: column;
   }
 }
+
+
+.section-cards__header{ /*rever ubicacion sass*/
+    padding-bottom: 10px; /*no se superponga la carta*/
+}
+
+/*********************************
+        tooltips
+  *********************************/
+ 
+
+.tiptext{
+    position:absolute;
+    top:100px;
+    left:94%;
+    display:none; // o color:transparent, color:black
+}
+
+//selecciona elem con clase .tiptext solo si .tiptext le sigue inmediatamente  a carrito-container, en hover.
+//si fuera sin +, no habria matching
+.search-bar__carrito-container:hover + .tiptext { /*rever, seria mejor delegarlo a js*/
+    display:block;
+}
+

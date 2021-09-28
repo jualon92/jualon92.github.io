@@ -137,6 +137,7 @@ body {
   }
 }
 
+/*si pongo &nav-color:red; no seria muy reutilizable*/
 /*********************************
             HEADER
 *********************************/
@@ -163,16 +164,16 @@ body {
   *********************************/
 .nav-bar {
   background-color: mediumturquoise;
+  /*&__nav-item {
+    text-align: center;
+    background-color: pink; 
+  }*/
 }
 .nav-bar__nav-list {
   /*con flex requiere menos codigo*/
   display: flex;
   list-style-type: none;
   justify-content: center;
-}
-.nav-bar__nav-item {
-  text-align: center;
-  background-color: pink;
 }
 .nav-bar__nav-link {
   /*inline no muestra padding top padding bottom*/
@@ -181,6 +182,9 @@ body {
   color: #fff;
   padding: 1em 2em;
   text-decoration: none;
+}
+.nav-bar__nav-link:hover, .nav-bar__nav-link:focus {
+  background-color: #cc0000;
 }
 
 /*********************************
@@ -192,7 +196,7 @@ body {
   justify-content: space-between;
 }
 .search-bar__logo-container, .search-bar__form-container {
-  padding: 1em;
+  padding: 0.65em;
 }
 .search-bar__logo-container {
   background-color: yellow;
@@ -208,14 +212,45 @@ body {
 }
 .search-bar__form-search {
   background-color: deeppink;
-  width: 70%;
+  width: 90%;
+  /*
+  &:hover, &:focus{  
+      background-color:hsl(328, 100%, 30%);
+  }*/
 }
 .search-bar__form-submit {
   background-color: darkslategray;
 }
 .search-bar__carrito-container {
-  flex: 0 0 3em;
+  display: flex;
+  flex: 0 0 5em;
   background-color: goldenrod;
+}
+.search-bar__carrito-img {
+  max-width: 100%;
+}
+.search-bar__search-bar__carrito-link {
+  display: flex;
+}
+
+.search-bar__form-search {
+  /* prefiero que no este nesteado en .search-bar*/
+}
+.search-bar__form-search:focus {
+  filter: brightness(60%);
+  /*si se cambia el color de barra busqueda, brigthness lo cambia*/
+}
+.search-bar__form-search::-moz-placeholder {
+  font-style: bold;
+  color: black;
+}
+.search-bar__form-search:-ms-input-placeholder {
+  font-style: bold;
+  color: black;
+}
+.search-bar__form-search::placeholder {
+  font-style: bold;
+  color: black;
 }
 
 /*********************************
@@ -272,6 +307,27 @@ body {
     flex-direction: column;
   }
 }
+.section-cards__header {
+  /*rever ubicacion sass*/
+  padding-bottom: 10px;
+  /*no se superponga la carta*/
+}
+
+/*********************************
+        tooltips
+  *********************************/
+.tiptext {
+  position: absolute;
+  top: 100px;
+  left: 94%;
+  display: none;
+}
+
+.search-bar__carrito-container:hover + .tiptext {
+  /*rever, seria mejor delegarlo a js*/
+  display: block;
+}
+
 .section-cards {
   background-color: #f1f2f3;
   padding: 1em;
