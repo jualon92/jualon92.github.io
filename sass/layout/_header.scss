@@ -120,7 +120,7 @@ $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reuti
        filter:brightness(60%); /*si se cambia el color de barra busqueda, brigthness lo cambia*/
     }
     &::placeholder{
-        font-style: bold;
+        
         color:black;
     }
 }

@@ -241,15 +241,12 @@ body {
   /*si se cambia el color de barra busqueda, brigthness lo cambia*/
 }
 .search-bar__form-search::-moz-placeholder {
-  font-style: bold;
   color: black;
 }
 .search-bar__form-search:-ms-input-placeholder {
-  font-style: bold;
   color: black;
 }
 .search-bar__form-search::placeholder {
-  font-style: bold;
   color: black;
 }
 
