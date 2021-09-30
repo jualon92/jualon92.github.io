@@ -1,7 +1,7 @@
 $rosado:deeppink; 
 $violeta:purple;
 $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reutilizable*/
-
+ 
 
 /*********************************
             HEADER
@@ -85,7 +85,7 @@ $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reuti
   }
 
   &__form-search {
-    background-color:$rosado;
+    background-color:#316282;
     width: 90%;
 
     /*
@@ -95,8 +95,9 @@ $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reuti
   }
 
   &__form-submit {
-    background-color: darkslategray;
-  }
+   // background-color: darkslategray;
+   background-color: #65BCEF;
+}
 
   &__carrito-container {
     display:flex;
@@ -116,12 +117,22 @@ $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reuti
 }
 
 .search-bar__form-search{ /* prefiero que no este nesteado en .search-bar*/
-   &:focus{
+   
+   padding:5px 10px 5px 10px;
+   border-radius:5px;
+
+    &:focus{
        filter:brightness(60%); /*si se cambia el color de barra busqueda, brigthness lo cambia*/
     }
+
+    &:hover{ /*rever*/
+         
+        border-style:solid;
+        border-color: #316282;
+    }
     &::placeholder{
-        
-        color:black;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:hsl(0, 0%, 20%);
     }
 }
 
@@ -183,6 +194,12 @@ $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reuti
   .nav-bar__nav-list {
     flex-direction: column;
   }
+
+  .search-bar__carrito-container:hover + .tiptext { /*rever, seria mejor delegarlo a js*/
+    display:block;
+    left:80%;
+    top:50px;
+    }
 }
 
 
@@ -194,13 +211,50 @@ $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reuti
         tooltips
   *********************************/
  
+/*
+.tipflow{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+}
+ 
+.tipflow__carrito{
+    border-style:solid; // candidato mixin
+    border-top:solid #333;
+    border-left-color:#333;
+    border-bottom:none white;
+    border-right:none white;
+    background-color: white;
+    border-width: 1.5px;
+    padding:2.5px 5px 2.5px;
+    margin-top:4px;
+    margin-right:4px;
+    display:none;
+}
+
+.search-bar__carrito-container:hover + .tiptext { 
+    display:block;
+}
+*/
 
 .tiptext{
-    position:absolute;
+    position:absolute; // podria hacerse con flex y quedaria mejor
     top:100px;
-    left:94%;
+    left:92.5%;
     display:none; // o color:transparent, color:black
+     
+    border-style:solid; // candidato mixin
+    border-top:solid #333;
+    border-left-color:#333;
+    border-bottom:none white;
+    border-right:none white;
+    background-color: white;
+    border-width: 1.5px;
+    padding:2.5px 5px 2.5px;
+
 }
+
+
 
 //selecciona elem con clase .tiptext solo si .tiptext le sigue inmediatamente  a carrito-container, en hover.
 //si fuera sin +, no habria matching
@@ -208,3 +262,68 @@ $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reuti
     display:block;
 }
 
+
+
+/*no deberia estar en _header.scss, rever*/
+
+.contacto{ 
+  margin-left:10px; //puede agregarse background y demases
+  margin-top:20px;
+
+  &__form{ /*rever nombre main*/
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    max-width: 40%;
+  }
+
+  &__titulo{
+    margin-bottom: 20px;
+  }
+
+  &__row-personal{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+     
+  }
+
+  &__boton-ui{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+     
+  }
+
+  &__comments{
+    margin-bottom:5px;
+    height:30px;
+    min-height: 100px;
+  }
+
+  &__submit{
+    align-self:flex-end;
+    width:60px; //var o mixin
+    height:2em;
+    margin-top:10px;
+  }
+
+  &__reset{
+    width:60px; //var o mixin
+    height:2em;
+    margin-top:10px;
+    margin-left:1px;
+  }
+
+  &__comments-title{
+    margin-bottom: 20px;
+  }
+
+  &__boton-ui{ // botones a la izquierda
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+     
+  }
+}
+ 

@@ -211,7 +211,7 @@ body {
   background-color: greenyellow;
 }
 .search-bar__form-search {
-  background-color: deeppink;
+  background-color: #316282;
   width: 90%;
   /*
   &:hover, &:focus{  
@@ -219,7 +219,7 @@ body {
   }*/
 }
 .search-bar__form-submit {
-  background-color: darkslategray;
+  background-color: #65BCEF;
 }
 .search-bar__carrito-container {
   display: flex;
@@ -235,19 +235,29 @@ body {
 
 .search-bar__form-search {
   /* prefiero que no este nesteado en .search-bar*/
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
 }
 .search-bar__form-search:focus {
   filter: brightness(60%);
   /*si se cambia el color de barra busqueda, brigthness lo cambia*/
 }
+.search-bar__form-search:hover {
+  /*rever*/
+  border-style: solid;
+  border-color: #316282;
+}
 .search-bar__form-search::-moz-placeholder {
-  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333333;
 }
 .search-bar__form-search:-ms-input-placeholder {
-  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333333;
 }
 .search-bar__form-search::placeholder {
-  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333333;
 }
 
 /*********************************
@@ -303,6 +313,13 @@ body {
   .nav-bar__nav-list {
     flex-direction: column;
   }
+
+  .search-bar__carrito-container:hover + .tiptext {
+    /*rever, seria mejor delegarlo a js*/
+    display: block;
+    left: 80%;
+    top: 50px;
+  }
 }
 .section-cards__header {
   /*rever ubicacion sass*/
@@ -313,16 +330,100 @@ body {
 /*********************************
         tooltips
   *********************************/
+/*
+.tipflow{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+}
+
+.tipflow__carrito{
+    border-style:solid; // candidato mixin
+    border-top:solid #333;
+    border-left-color:#333;
+    border-bottom:none white;
+    border-right:none white;
+    background-color: white;
+    border-width: 1.5px;
+    padding:2.5px 5px 2.5px;
+    margin-top:4px;
+    margin-right:4px;
+    display:none;
+}
+
+.search-bar__carrito-container:hover + .tiptext { 
+    display:block;
+}
+*/
 .tiptext {
   position: absolute;
   top: 100px;
-  left: 94%;
+  left: 92.5%;
   display: none;
+  border-style: solid;
+  border-top: solid #333;
+  border-left-color: #333;
+  border-bottom: none white;
+  border-right: none white;
+  background-color: white;
+  border-width: 1.5px;
+  padding: 2.5px 5px 2.5px;
 }
 
 .search-bar__carrito-container:hover + .tiptext {
   /*rever, seria mejor delegarlo a js*/
   display: block;
+}
+
+/*no deberia estar en _header.scss, rever*/
+.contacto {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.contacto__form {
+  /*rever nombre main*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 40%;
+}
+.contacto__titulo {
+  margin-bottom: 20px;
+}
+.contacto__row-personal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contacto__boton-ui {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.contacto__comments {
+  margin-bottom: 5px;
+  height: 30px;
+  min-height: 100px;
+}
+.contacto__submit {
+  align-self: flex-end;
+  width: 60px;
+  height: 2em;
+  margin-top: 10px;
+}
+.contacto__reset {
+  width: 60px;
+  height: 2em;
+  margin-top: 10px;
+  margin-left: 1px;
+}
+.contacto__comments-title {
+  margin-bottom: 20px;
+}
+.contacto__boton-ui {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .section-cards {

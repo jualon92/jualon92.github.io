@@ -1,13 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <h1>Contacto</h1>
+
+    <header class="main-header">
+
+
+        <nav class="nav-bar">
+            <ul class="nav-bar__nav-list">
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="alta.html">Alta</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <div class="search-bar__logo-container">Logo</div>
+            <form class="search-bar__form-container">
+                <label class="search-bar__form-label" for="busqueda">Buscar</label>
+                <input class="search-bar__form-search" id="busqueda" type="search"
+                    placeholder="Buscar productos, marcas y más..." />
+                <input class="search-bar__form-submit" type="submit" value="Buscar" />
+            </form>
+
+            <a href="carrito.html" class="search-bar__carrito-container">
+                <img class="search-bar__carrito-img" src="img/productos/carrito.jpg" alt="imagen de carrito" />
+            </a>
+            <span class="tiptext">Carrito</span>
+
+
+
+        </div>
+    </header>
+
+    <main>
+        <div class="contacto"> <!-- clase podria empezar mas abajo, pero me parece relevante que empieze en contenedor y luego incluya titulo y form-->
+            <h1 class="contacto__titulo">Contactanos</h1>
+            <form class="contacto__form" action="/google.com.ar " method="get">
+                
+                    <div class="contacto__row-personal">
+                        <label class="nombre2" for="name">Nombre y Apel:</label>
+                        <input class="contacto__input" type="text" name="name" id="name" placeholder="nombre" required
+                            tabindex="1"> <!-- mas comodo tab index-->
+
+
+                        <label for="pemail">e-mail:</label>
+                        <input class="contacto__input" type="email" name="pemail" id="pemail"
+                            placeholder="mail@notamail.com" required tabindex="2">
+                    </div>
+                    <label for="contacto__comments-title">Comentarios</label>
+                    <textarea class="contacto__comments" name="comentarios-persona" id="comentarios-persona" cols="16"
+                        rows="22" tabindex="3"></textarea>
+
+                    <div class="contacto__boton-ui">
+                        <input class="contacto__submit" type="submit" value="Enviar">
+                        <input class="contacto__reset" type="reset" value="Borrar">
+                    </div>
+
+                
+            </form>
+        </div>
+    </main>
+
 </body>
+
 </html>
