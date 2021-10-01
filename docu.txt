@@ -1,12 +1,7 @@
-cambios a realizar:
+a agregar:
 
-~~buscar que tenga placeholder, y profundice color cuando focused
-~~problema de que tapa "Se encontraron X productos"
-paleta de colores  
-logo, imagen de carrito
-~~que marque cual elijo de inicio/alta/contacto. :on hover 
-border style 
-
+podria utilizarse herencia para comportamiento similar alrededor de la pagina en inputs
+tambien variables de colores
 -------
 
 

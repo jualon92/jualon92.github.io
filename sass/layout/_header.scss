@@ -199,7 +199,7 @@ $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reuti
     display:block;
     left:80%;
     top:50px;
-    }
+   }
 }
 
 
@@ -243,7 +243,7 @@ $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reuti
     left:92.5%;
     display:none; // o color:transparent, color:black
      
-    border-style:solid; // candidato mixin
+    border-style:solid; // candidato herencia
     border-top:solid #333;
     border-left-color:#333;
     border-bottom:none white;
@@ -262,68 +262,4 @@ $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reuti
     display:block;
 }
 
-
-
-/*no deberia estar en _header.scss, rever*/
-
-.contacto{ 
-  margin-left:10px; //puede agregarse background y demases
-  margin-top:20px;
-
-  &__form{ /*rever nombre main*/
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    max-width: 40%;
-  }
-
-  &__titulo{
-    margin-bottom: 20px;
-  }
-
-  &__row-personal{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-     
-  }
-
-  &__boton-ui{
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-     
-  }
-
-  &__comments{
-    margin-bottom:5px;
-    height:30px;
-    min-height: 100px;
-  }
-
-  &__submit{
-    align-self:flex-end;
-    width:60px; //var o mixin
-    height:2em;
-    margin-top:10px;
-  }
-
-  &__reset{
-    width:60px; //var o mixin
-    height:2em;
-    margin-top:10px;
-    margin-left:1px;
-  }
-
-  &__comments-title{
-    margin-bottom: 20px;
-  }
-
-  &__boton-ui{ // botones a la izquierda
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-     
-  }
-}
- 
+  

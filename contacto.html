@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="contacto-page">
 
     <header class="main-header">
 
@@ -50,31 +50,34 @@
     </header>
 
     <main>
-        <div class="contacto"> <!-- clase podria empezar mas abajo, pero me parece relevante que empieze en contenedor y luego incluya titulo y form-->
+        <div class="contacto">
             <h1 class="contacto__titulo">Contactanos</h1>
-            <form class="contacto__form" action="/google.com.ar " method="get">
-                
-                    <div class="contacto__row-personal">
-                        <label class="nombre2" for="name">Nombre y Apel:</label>
-                        <input class="contacto__input" type="text" name="name" id="name" placeholder="nombre" required
-                            tabindex="1"> <!-- mas comodo tab index-->
+            <div class="contacto__form">
+                <form action="/google.com.ar " method="get">
 
 
-                        <label for="pemail">e-mail:</label>
-                        <input class="contacto__input" type="email" name="pemail" id="pemail"
-                            placeholder="mail@notamail.com" required tabindex="2">
-                    </div>
-                    <label for="contacto__comments-title">Comentarios</label>
-                    <textarea class="contacto__comments" name="comentarios-persona" id="comentarios-persona" cols="16"
-                        rows="22" tabindex="3"></textarea>
+                    <label class="contacto__label" for="name">Nombre: </label>
+                    <input class="contacto__input" type="text" name="name" id="name" placeholder="nombre" required
+                        tabindex="1"> <!-- mas comodo tab index-->
+
+
+                    <label class="contacto__label" for="pemail">e-mail:</label>
+                    <input class="contacto__input" type="email" name="pemail" id="pemail"
+                        placeholder="mail@notamail.com" required tabindex="2">
+
+                    <label class="contacto__comments-title" for=comentarios-persona>Comentarios</label>
+                    <textarea class="contacto__comments" name="comentarios-persona" id="comentarios-persona" cols="12"
+                        rows="12" tabindex="3"></textarea>
 
                     <div class="contacto__boton-ui">
                         <input class="contacto__submit" type="submit" value="Enviar">
                         <input class="contacto__reset" type="reset" value="Borrar">
                     </div>
 
-                
-            </form>
+
+
+                </form>
+            </div>
         </div>
     </main>
 
