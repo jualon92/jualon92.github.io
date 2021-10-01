@@ -1,8 +1,0 @@
-a agregar:
-
-podria utilizarse herencia para comportamiento similar alrededor de la pagina en inputs
-tambien variables de colores
--------
-
-
- 
