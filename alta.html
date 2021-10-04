@@ -58,28 +58,54 @@
 
 <body>
     <main>
-        <div class="contacto">
-            <h1 class="contacto__titulo">Alta</h1>
-            <div class="contacto__form">
+        <div class="alta">
+            <h1 class="alta__titulo">Alta</h1>
+            <div class="alta__form">
                 <form action="/google.com.ar " method="get">
 
 
-                    <label class="contacto__label" for="name">Nombre: </label>
-                    <input class="contacto__input" type="text" name="name" id="name" placeholder="nombre" required
+                    <label class="alta__label-nombre" for="name">nombre: </label>
+                    <input class="alta__input-nombre" type="text" name="name" id="name" placeholder="nombre" required
                         tabindex="1"> <!-- mas comodo tab index-->
 
 
-                    <label class="contacto__label" for="pemail">e-mail:</label>
-                    <input class="contacto__input" type="email" name="pemail" id="pemail"
-                        placeholder="mail@notamail.com" required tabindex="2">
+                    <label class="alta__label-precio" for="precio">precio:</label>
+                    <input class="alta__input-precio" type="number" name="precio" id="precio"
+                        placeholder="precio" required tabindex="2">
 
-                    <label class="contacto__comments-title" for=comentarios-persona>Comentarios</label>
-                    <textarea class="contacto__comments" name="comentarios-persona" id="comentarios-persona" cols="12"
-                        rows="12" tabindex="3"></textarea>
+                    <label class="alta__label-stock" for="stock">stock:</label>
+                    <input class="alta__input-stock" type="number" name="stock" id="stock"
+                        placeholder="numero" required tabindex="2">
+                    
+                    <label class="alta__label-marca" for="marca">marca:</label>
+                    <input class="alta__input-marca" type="text" name="marca" id="marca"
+                        placeholder="marca" required tabindex="2">
+                     
+                        <label class="alta__label" for="cate">elegir categoria:</label>
+                        <input list="alta-lista" id="cate" name="cate">
+                                
+                        <datalist id="alta-lista">
+                            <option value="Chocolate">
+                            <option value="Coconut">
+                            <option value="Mint">
+                            <option value="Strawberry">
+                            <option value="Vanilla">
+                        </datalist>
+                    
+                    <label class="alta__label-fotos" for="pfotos">cargar foto:</label>
+                    <input type="file" src="" alt="" id="pfotos" name="pfotos">
+                    
 
-                    <div class="contacto__boton-ui">
-                        <input class="contacto__submit" type="submit" value="Enviar">
-                        <input class="contacto__reset" type="reset" value="Borrar">
+                    <label class="alta__label-detalles" for="alta-detalles">detalles</label>
+                    <textarea class="alta__input-detalles" name="alta-detalle"s id="comentarios-persona" cols="3"
+                        rows="3" tabindex="3"></textarea>
+                    
+                    <label class="alta__label-envios" for="envioscargo">envios sin cargo:</label>
+                    <input class="alta__input-envios" type="checkbox" name="envioscargo" id="envioscargo">    
+
+                    <div class="alta__boton-ui">
+                        <input class="alta__submit" type="submit" value="Enviar">
+                        <input class="alta__reset" type="reset" value="Borrar">
                     </div>
 
 

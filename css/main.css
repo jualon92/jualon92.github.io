@@ -550,15 +550,16 @@ body {
 }
 
 .footer-main {
-  /* basado en https://www.armytech.com.ar/ */
+  /* basado en https://www.armytech.com.ar/ footer main */
   background-color: #565656;
-  width: 100%;
-  padding-top: 1.5%;
-  padding-bottom: 1.5%;
-}
-
-.footer-box__info, .footer-box__lista > li {
-  margin-bottom: 6px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-family: "Rajdhani", sans-serif;
+  /* font candidato var o clase, en carpeta typo*/
+  font-weight: 200;
+  letter-spacing: 0.02em;
+  font-size: 10px;
+  line-height: 1.42857em;
 }
 
 .footer-box {
@@ -574,14 +575,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  font-family: "Rajdhani", sans-serif;
-  /* font candidato var o clase, en carpeta typo*/
-  font-weight: 200;
-  letter-spacing: 0.02em;
-  font-size: 10px;
-  line-height: 1.42857em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-box__info, .footer-box__lista > li {
+  /*rever*/
+  margin-bottom: 6px;
 }
 
 .footer-box__lista {
@@ -590,7 +591,7 @@ body {
 
 .footer-box__titulo {
   padding-bottom: 4px;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -609,7 +610,7 @@ body {
   text-decoration: none;
 }
 
-.footer-boxx__horario {
+.footer-box__horario {
   color: #FD8A2F;
 }
 
@@ -636,6 +637,17 @@ body {
   border-style: none;
   height: 25px;
   width: 120%;
+}
+
+.footer-box__enviar {
+  text-transform: capitalize;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 6px;
+  border-style: none;
+  padding: 5px;
+  margin-left: 90%;
+  margin-top: 2%;
 }
 
 input::-webkit-input-placeholder {
@@ -670,15 +682,36 @@ input:focus::placeholder {
   color: transparent;
 }
 
-.footer-box__enviar {
-  text-transform: capitalize;
-  margin: 0 auto;
+.footer-bottom {
   background-color: white;
-  border-radius: 6px;
-  border-style: none;
-  padding: 5px;
-  margin-left: 90%;
-  margin-top: 2%;
+  color: grey;
+  display: inline-block;
+  padding-bottom: 1%;
+  margin-top: 1%;
+  margin-left: 276.781px;
+  /*px codigo pag*/
+  margin-right: 276.781px;
+}
+
+.footer-bottom__msg {
+  font-family: "Rajdhani", sans-serif;
+  /* font candidato var o clase, en carpeta typo*/
+  font-weight: 200;
+  letter-spacing: 0.02em;
+  font-size: 10px;
+  line-height: 1.42857em;
+}
+
+@media (max-width: 768px) {
+  .footer-box, .footer-bottom {
+    margin-left: 11%;
+    margin-right: 11%;
+  }
+  .footer-bottom {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
 }
 
 .section-cards {

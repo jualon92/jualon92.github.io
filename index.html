@@ -8,9 +8,9 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="css/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700" rel="stylesheet">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
-    
-  
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+
 </head>
 <header class="main-header">
     <input type="checkbox" id="menu" />
@@ -330,7 +330,8 @@
             </div>
         </section>
     </main>
-    <footer class="footer-main">  
+    <footer>
+        <div class="footer-main"> 
         <div class="footer-box">
             <div class="footer-box__ayuda footer-box__info ">
                 <h2 class="footer-box__titulo">Ayuda</h2>
@@ -340,7 +341,8 @@
                     <li>Lorem ipsum dolor sit.</li>
                 </ul>
             </div>
-            <div class="footer-box__info"> <!--footer-box__info podria ser reempalzo por childs-->
+            <div class="footer-box__info">
+                <!--footer-box__info podria ser reempalzo por childs-->
                 <h2 class="footer-box__titulo">Info al cliente</h2>
                 <ul class="footer-box__lista">
                     <a class="footer-box__link-contacto" href="contacto.html">
@@ -364,29 +366,38 @@
                         <span class="footer-box__tel"> 11.2578.9981 </span>
                     </li>
                     <div class="footer-box__social">
- 
- 
+
+
                     </div>
                 </ul>
             </div>
             <div class="footer-box__info footer-box__ofertas">
                 <h2 class="footer-box__titulo">OFERTAS Y NOVEDADES</h2>
-                <ul class="footer-box__lista">
-                    <li>
-                        <input class="footer-box__usuario footer-box__login" type="text" placeholder="Nombre">          
-                   
-                    </li>
-                    <li>
-                        <input type="text" class="footer-box__password footer-box__login" placeholder="Email">
-                    </li>
-                    <li>
-                        <input class="footer-box__enviar" type="submit" value="enviar!">
-                    </li>
-                </ul>
-             
+                <form action="get">
+                    <ul class="footer-box__lista">
+
+                        <li>
+                            <input class="footer-box__usuario footer-box__login" type="text" placeholder="Nombre">
+
+                        </li>
+                        <li>
+                            <input type="text" class="footer-box__password footer-box__login" placeholder="Email">
+                        </li>
+                        <li>
+                            <input class="footer-box__enviar" type="submit" value="enviar!">
+                        </li>
+
+                    </ul>
+                </form>
             </div>
+             
         </div>
+         </div>
+         <div class="footer-bottom">
+              <div class="footer-bottom__msg"> © Lorem ipsum  - dolor sit amet consectetur.</div>        
+         </div>
     </footer>
+ 
 </body>
 
 </html>
