@@ -1,13 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
+<header class="main-header">
+    <input type="checkbox" id="menu" />
+
+    <nav class="nav-bar">
+        <!-- acomodar con unordered list mas simple para nav links que inline  -->
+
+        <ul class="nav-bar__nav-list">
+            <li class="nav-bar__nav-item">
+                <a class="nav-bar__nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-bar__nav-item">
+                <a class="nav-bar__nav-link" href="alta.html">Alta</a>
+            </li>
+            <li class="nav-bar__nav-item">
+                <a class="nav-bar__nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-bar__nav-item">
+                <a class="nav-bar__nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="search-bar">
+        <div class="search-bar__logo-container">Logo</div>
+        <form class="search-bar__form-container">
+            <label class="search-bar__form-label" for="busqueda">Buscar</label>
+            <input class="search-bar__form-search" id="busqueda" type="search"
+                placeholder="Buscar productos, marcas y más..." />
+            <input class="search-bar__form-submit" type="submit" value="Buscar" />
+        </form>
+
+        <a href="carrito.html" class="search-bar__carrito-container">
+            <img class="search-bar__carrito-img" src="img/productos/carrito.jpg" alt="imagen de carrito" />
+        </a>
+        <span class="tiptext">Carrito</span>
+
+
+        <div class="menu-toggle">
+            <label class="menu-toggle__label" for="menu">
+                <span class="menu-toggle__pan-arriba"></span>
+                <span class="menu-toggle__medallon"></span>
+                <span class="menu-toggle__pan-abajo"></span>
+            </label>
+        </div>
+    </div>
+
+</header>
+
 <body>
-    <h1>Alta-sLlantas</h1>
+    <main>
+        <div class="contacto">
+            <h1 class="contacto__titulo">Alta</h1>
+            <div class="contacto__form">
+                <form action="/google.com.ar " method="get">
+
+
+                    <label class="contacto__label" for="name">Nombre: </label>
+                    <input class="contacto__input" type="text" name="name" id="name" placeholder="nombre" required
+                        tabindex="1"> <!-- mas comodo tab index-->
+
+
+                    <label class="contacto__label" for="pemail">e-mail:</label>
+                    <input class="contacto__input" type="email" name="pemail" id="pemail"
+                        placeholder="mail@notamail.com" required tabindex="2">
+
+                    <label class="contacto__comments-title" for=comentarios-persona>Comentarios</label>
+                    <textarea class="contacto__comments" name="comentarios-persona" id="comentarios-persona" cols="12"
+                        rows="12" tabindex="3"></textarea>
+
+                    <div class="contacto__boton-ui">
+                        <input class="contacto__submit" type="submit" value="Enviar">
+                        <input class="contacto__reset" type="reset" value="Borrar">
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>

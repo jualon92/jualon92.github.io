@@ -23,12 +23,20 @@ $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reuti
   background-color: yellow;
 }
 
+.main-header{ /* sticky header*/
+   position:sticky;
+   top:0;
+   z-index:3; 
+}
+
+
 /*********************************
               NAV BAR
   *********************************/
 .nav-bar {
      
     background-color: mediumturquoise;
+     
 
   &__nav-list { /*con flex requiere menos codigo*/
     display: flex;
@@ -62,7 +70,7 @@ $rojo-apagado:hsl(0, 100%, 40%);   /*si pongo &nav-color:red; no seria muy reuti
   background-color: olivedrab;
   display: flex;
   justify-content: space-between;
-
+   
 
   &__logo-container,
   &__form-container {

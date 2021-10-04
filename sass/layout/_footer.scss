@@ -1,0 +1,120 @@
+.footer-main{ /* basado en https://www.armytech.com.ar/ */
+    background-color: #565656;
+    width:100%;
+    padding-top:1.5%;
+    padding-bottom:1.5%;
+}
+ 
+.footer-box__info, .footer-box__lista > li{
+    margin-bottom:6px;
+}
+.footer-box{   
+   margin-left:276.781px; /*px codigo pag*/
+   margin-right:276.781px;
+  //  margin-left:200px;
+  //  margin-right:200px;
+    color:white;
+   // text-align: center;
+    display:flex; /* rever, manera de achicarse con flex:*/
+    flex-direction:row;
+    justify-content: space-around;
+   
+    font-family: "Rajdhani", sans-serif; /* font candidato var o clase, en carpeta typo*/
+    font-weight: 200;
+    letter-spacing: 0.02em; 
+    font-size:10px;
+    line-height: 1.42857em
+}
+
+.footer-box__lista{
+    list-style-type: none;
+}
+ 
+
+.footer-box__titulo{
+    padding-bottom:4px;
+    font-size: 1.1em;
+    font-weight: 600;
+     
+    text-transform: uppercase;
+    
+}
+
+.footer-box__titulo::after{  // https://stackoverflow.com/questions/19254411/how-do-i-set-vertical-space-between-list-items
+     
+    content: "";
+    border-bottom:2px solid orangered;
+    //width:18%; //al tomar porcentaje depende del largo de h1
+    width:18px;
+    display:block;
+    border-width: 1.5px;
+    padding-top:4px;
+     
+    
+}
+
+.footer-box__link-contacto{
+    color:hsl(0, 0%, 64%); // background mas claro 
+     
+    text-decoration: none; // sin underline
+    
+}
+ 
+.footer-boxx__horario{
+    color:#FD8A2F;
+
+}
+
+ 
+
+ 
+
+.footer-box__tel{
+    color:#FD8A2F;
+    font-size:medium; //codigo repetido, rever
+    
+    font-weight:800;
+}
+
+.footer-box__caract{
+    color:#FD8A2F;
+    font-size:medium;
+     
+}
+ 
+
+.footer-box__ofertas{
+    border-left:grey solid;
+    padding-left:2%;
+    border-width: 1px;
+}
+
+.footer-box__login{
+    background-color:#888888;
+    padding-left:10px;
+    border-style:none;
+    height:25px;
+    width:120%;
+    
+   
+}
+
+input::placeholder{
+    color:hsl(0, 0%, 84%);
+     
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+ 
+.footer-box__enviar{
+     text-transform: capitalize;
+     margin:0 auto;
+     background-color: white;
+     border-radius: 6px;
+     border-style: none;
+     padding:5px;
+     margin-left:90%;
+     margin-top:2%;
+}
