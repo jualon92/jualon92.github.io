@@ -194,6 +194,10 @@ body {
   height: 40%;
 }
 
+.contacto ul {
+  list-style-type: none;
+}
+
 .contacto__input {
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -244,6 +248,56 @@ body {
   color: white;
   border-radius: 4px;
   border: none;
+}
+
+.alta {
+  width: 500px;
+  margin-left: 15px;
+}
+
+.alta__form input, .alta__form textarea {
+  margin-left: 155px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 13px;
+  margin-top: 5px;
+  margin-bottom: 14px;
+}
+
+.alta__form textarea {
+  width: 163px;
+}
+
+.alta__form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 110%;
+  height: 40%;
+}
+
+.alta__form label {
+  position: absolute;
+}
+
+.alta__boton-ui {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.alta__boton-ui input {
+  margin: 0;
+  margin-left: 10px;
 }
 
 /*si pongo &nav-color:red; no seria muy reutilizable*/

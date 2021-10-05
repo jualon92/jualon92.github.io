@@ -1,0 +1,48 @@
+ 
+.alta{ // no es reusable, dedicado a pagina alta, deberia ir en pages
+    width:500px;
+    margin-left:15px;
+     
+}
+
+///////////////////// 
+.alta__form input, .alta__form textarea{
+    margin-left:155px;
+    
+    
+    border-radius: 4px; //candidato var o func
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      padding: 13px;
+      margin-top: 5px;
+     margin-bottom: 14px;     
+}
+
+
+.alta__form textarea{
+    width:163px;
+}
+.alta__form{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width:110%; // ver este tema
+    
+    height:40%;
+}
+.alta__form label{
+    position:absolute; // out from the normal flow of the document
+}
+
+.alta__boton-ui{
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+.alta__boton-ui input{ // funcion boton
+    margin:0;
+    margin-left:10px;
+}
+
+ 

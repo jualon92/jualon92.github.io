@@ -63,27 +63,34 @@
             <div class="alta__form">
                 <form action="/google.com.ar " method="get">
 
-
+                <div class="alta__nombre">  <!-- es necesario el div? podria hacer label, input, inline-block y ahorrarse la clase-->
                     <label class="alta__label-nombre" for="name">nombre: </label>
                     <input class="alta__input-nombre" type="text" name="name" id="name" placeholder="nombre" required
                         tabindex="1"> <!-- mas comodo tab index-->
+                </div>       
 
-
+                <div class="alta__precio"> 
                     <label class="alta__label-precio" for="precio">precio:</label>
                     <input class="alta__input-precio" type="number" name="precio" id="precio"
                         placeholder="precio" required tabindex="2">
-
-                    <label class="alta__label-stock" for="stock">stock:</label>
+                </div>    
+                
+                <div class="alta__stock"> 
+                <label class="alta__label-stock" for="stock">stock:</label>
                     <input class="alta__input-stock" type="number" name="stock" id="stock"
                         placeholder="numero" required tabindex="2">
-                    
+              </div>    
+
+                <div class="alta__marca"> 
                     <label class="alta__label-marca" for="marca">marca:</label>
                     <input class="alta__input-marca" type="text" name="marca" id="marca"
                         placeholder="marca" required tabindex="2">
-                     
+                    </div>    
+                    
+                    <div class="categoria"> 
                         <label class="alta__label" for="cate">elegir categoria:</label>
                         <input list="alta-lista" id="cate" name="cate">
-                                
+                               
                         <datalist id="alta-lista">
                             <option value="Chocolate">
                             <option value="Coconut">
@@ -91,18 +98,24 @@
                             <option value="Strawberry">
                             <option value="Vanilla">
                         </datalist>
-                    
+                    </div>  
+                 <div> 
                     <label class="alta__label-fotos" for="pfotos">cargar foto:</label>
                     <input type="file" src="" alt="" id="pfotos" name="pfotos">
-                    
+                </div>
 
+                <div> 
                     <label class="alta__label-detalles" for="alta-detalles">detalles</label>
                     <textarea class="alta__input-detalles" name="alta-detalle"s id="comentarios-persona" cols="3"
                         rows="3" tabindex="3"></textarea>
-                    
+                </div>    
+
+                <div> 
                     <label class="alta__label-envios" for="envioscargo">envios sin cargo:</label>
                     <input class="alta__input-envios" type="checkbox" name="envioscargo" id="envioscargo">    
+                </div>    
 
+                
                     <div class="alta__boton-ui">
                         <input class="alta__submit" type="submit" value="Enviar">
                         <input class="alta__reset" type="reset" value="Borrar">
