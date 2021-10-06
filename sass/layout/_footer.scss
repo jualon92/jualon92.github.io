@@ -8,15 +8,15 @@
     font-family: "Rajdhani", sans-serif; /* font candidato var o clase, en carpeta typo*/
     font-weight: 200; //puede ir arriba/
     letter-spacing: 0.02em; 
-    font-size:10px;
+    font-size: em(10); // em seria mas responsive que pixel. se creo funcion para adaptar px a em
     line-height: 1.42857em;
   //  padding-left:276.781px ;
   //  padding-right:276.781px ;
 }
 
 .footer-box{
-    margin-left:276.781px; /*px codigo pag*/
-     margin-right:276.781px;
+    margin-left:em(276.781); /*px codigo pag*/
+     margin-right:em(276.781);
     color:white;
     display:flex; /* rever, manera de achicarse con flex:*/
     flex-direction:row;
@@ -24,7 +24,7 @@
    
 
     &__info, &__lista > li{ /*rever*/
-        margin-bottom:6px;
+        margin-bottom:em(6);
     }
 
     &__lista{
@@ -41,7 +41,7 @@
             content: ""; //necesario para que after funcione
             border-bottom:2px solid orangered;
             //width:18%; //al tomar porcentaje depende del largo de h1
-            width:18px;
+            width:em(18);
             display:block;
             border-width: 1.5px;
             padding-top:4px;
@@ -81,7 +81,7 @@
         padding-left:10px;
         border-style:none;
         height:25px;
-        width:120%;
+        width:90%;
     }
 
     &__enviar{
@@ -91,7 +91,7 @@
         border-radius: 6px;
         border-style: none;
         padding:5px;
-        margin-left:90%;
+        margin-left:60%;
         margin-top:2%;
     }
 
@@ -114,9 +114,6 @@ input:focus::placeholder {
     display:inline-block;
     padding-bottom:1%;
     margin-top:1%;
-    margin-left:276.781px; /*px codigo pag*/
-    margin-right:276.781px;
-
     
 }
 
@@ -125,8 +122,9 @@ input:focus::placeholder {
     font-family: "Rajdhani", sans-serif; /* font candidato var o clase, en carpeta typo*/
     font-weight: 200; //puede ir arriba/
     letter-spacing: 0.02em; 
-    font-size:10px;
+    font-size:em(10); /*preferi no usar px para no necesitar tanto media queries*/
     line-height: 1.42857em;
+  
 } 
  
 
@@ -143,3 +141,35 @@ input:focus::placeholder {
     }
      
 }
+
+@media (max-width:1400px){ //estaria bueno agregar soporte ultrawide
+    .footer-main, .footer-bottom__msg{ 
+       font-size:em(13);
+    }
+
+    .footer-bottom{
+        padding-left:0;
+    }
+
+    .footer-box{ 
+    //   gap:1.5em; // no quiero que desaparezcan!
+        flex-wrap: wrap;
+        margin-right: 0.4em;
+        margin-left: 0.4em;
+        
+    }
+
+    .footer-box__ayuda, .footer-box__info{
+        flex:50%; // flex basis 50% del width 
+        
+    }
+
+    .footer-box__titulo{
+        font-size:0.8rem;
+    }
+
+    
+
+    
+}
+

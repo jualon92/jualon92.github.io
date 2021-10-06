@@ -612,14 +612,14 @@ body {
   /* font candidato var o clase, en carpeta typo*/
   font-weight: 200;
   letter-spacing: 0.02em;
-  font-size: 10px;
+  font-size: 0.625rem;
   line-height: 1.42857em;
 }
 
 .footer-box {
-  margin-left: 276.781px;
+  margin-left: 17.29881rem;
   /*px codigo pag*/
-  margin-right: 276.781px;
+  margin-right: 17.29881rem;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -636,7 +636,7 @@ body {
 
 .footer-box__info, .footer-box__lista > li {
   /*rever*/
-  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
 }
 
 .footer-box__lista {
@@ -653,7 +653,7 @@ body {
 .footer-box__titulo::after {
   content: "";
   border-bottom: 2px solid orangered;
-  width: 18px;
+  width: 1.125rem;
   display: block;
   border-width: 1.5px;
   padding-top: 4px;
@@ -690,7 +690,7 @@ body {
   padding-left: 10px;
   border-style: none;
   height: 25px;
-  width: 120%;
+  width: 90%;
 }
 
 .footer-box__enviar {
@@ -700,7 +700,7 @@ body {
   border-radius: 6px;
   border-style: none;
   padding: 5px;
-  margin-left: 90%;
+  margin-left: 60%;
   margin-top: 2%;
 }
 
@@ -742,9 +742,6 @@ input:focus::placeholder {
   display: inline-block;
   padding-bottom: 1%;
   margin-top: 1%;
-  margin-left: 276.781px;
-  /*px codigo pag*/
-  margin-right: 276.781px;
 }
 
 .footer-bottom__msg {
@@ -752,7 +749,8 @@ input:focus::placeholder {
   /* font candidato var o clase, en carpeta typo*/
   font-weight: 200;
   letter-spacing: 0.02em;
-  font-size: 10px;
+  font-size: 0.625rem;
+  /*preferi no usar px para no necesitar tanto media queries*/
   line-height: 1.42857em;
 }
 
@@ -765,6 +763,29 @@ input:focus::placeholder {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+}
+
+@media (max-width: 1400px) {
+  .footer-main, .footer-bottom__msg {
+    font-size: 0.8125rem;
+  }
+  .footer-bottom {
+    padding-left: 0;
+  }
+  .footer-box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: 0.4em;
+    margin-left: 0.4em;
+  }
+  .footer-box__ayuda, .footer-box__info {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+  .footer-box__titulo {
+    font-size: 0.8rem;
   }
 }
 
