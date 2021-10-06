@@ -1,3 +1,7 @@
+$breakpoint-small:768px;
+$breakpoint-medium:800px;
+$breakpoint-high:2400px;
+
 .footer-main{ /* basado en https://www.armytech.com.ar/ footer main */
     background-color: #565656;
    // width:100%;
@@ -15,8 +19,10 @@
 }
 
 .footer-box{
-    margin-left:em(276.781); /*px codigo pag*/
-     margin-right:em(276.781);
+ //   margin-left:em(276.781); /*px codigo pag*/
+  //   margin-right:em(276.781);
+    margin-left:20%; // me gusta como se comporta % al bajar o  subir res (% relative to container size)
+    margin-right:20%;
     color:white;
     display:flex; /* rever, manera de achicarse con flex:*/
     flex-direction:row;
@@ -114,7 +120,7 @@ input:focus::placeholder {
     display:inline-block;
     padding-bottom:1%;
     margin-top:1%;
-    
+     
 }
 
 .footer-bottom__msg{
@@ -127,22 +133,9 @@ input:focus::placeholder {
   
 } 
  
-
-@media (max-width: 768px){
-    .footer-box, .footer-bottom{
-        
-        margin-left:11%;
-        margin-right:11%;
-    }
-
-    .footer-bottom{
-        width: max-content;
-  
-    }
-     
-}
-
-@media (max-width:1400px){ //estaria bueno agregar soporte ultrawide
+//smartphones y tablets 
+@media (min-width:$breakpoint-mobile){ 
+//@media (max-width:1100px)  ){ // antes de laptop
     .footer-main, .footer-bottom__msg{ 
        font-size:em(13);
     }
@@ -157,6 +150,11 @@ input:focus::placeholder {
         margin-right: 0.4em;
         margin-left: 0.4em;
         
+        &__ofertas{
+            border-style:none;
+            border-width:0;
+            padding-left:0;
+        }
     }
 
     .footer-box__ayuda, .footer-box__info{
@@ -168,8 +166,21 @@ input:focus::placeholder {
         font-size:0.8rem;
     }
 
-    
-
-    
 }
 
+
+@media (min-width:$breakpoint-desktop){
+    .footer-bottom{
+        margin-left:20%;
+    }
+    
+    .footer-main{
+        font-size:0.8rem;
+    }
+}
+ 
+@media (min-width:$breakpoint-high){
+    .footer-main{
+        font-size:1.2rem;
+    }
+}

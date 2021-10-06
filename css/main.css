@@ -617,9 +617,8 @@ body {
 }
 
 .footer-box {
-  margin-left: 17.29881rem;
-  /*px codigo pag*/
-  margin-right: 17.29881rem;
+  margin-left: 20%;
+  margin-right: 20%;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -754,19 +753,7 @@ input:focus::placeholder {
   line-height: 1.42857em;
 }
 
-@media (max-width: 768px) {
-  .footer-box, .footer-bottom {
-    margin-left: 11%;
-    margin-right: 11%;
-  }
-  .footer-bottom {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-  }
-}
-
-@media (max-width: 1400px) {
+@media (max-width: 769px) {
   .footer-main, .footer-bottom__msg {
     font-size: 0.8125rem;
   }
@@ -779,6 +766,11 @@ input:focus::placeholder {
     margin-right: 0.4em;
     margin-left: 0.4em;
   }
+  .footer-box__ofertas {
+    border-style: none;
+    border-width: 0;
+    padding-left: 0;
+  }
   .footer-box__ayuda, .footer-box__info {
     -webkit-box-flex: 50%;
         -ms-flex: 50%;
@@ -786,6 +778,21 @@ input:focus::placeholder {
   }
   .footer-box__titulo {
     font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .footer-bottom {
+    margin-left: 20%;
+  }
+  .footer-main {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .footer-main {
+    font-size: 1.2rem;
   }
 }
 
