@@ -1,6 +1,7 @@
-$breakpoint-small:768px;
-$breakpoint-medium:800px;
+$breakpoint-small:769px;
+$breakpoint-medium:770px;
 $breakpoint-high:2400px;
+$color-naranjish:#FD8A2F;
 
 .footer-main{ /* basado en https://www.armytech.com.ar/ footer main */
     background-color: #565656;
@@ -61,18 +62,18 @@ $breakpoint-high:2400px;
     }
 
     &__horario{
-        color:#FD8A2F;
+        color:$color-naranjish;
     }
 
     &__tel{
-        color:#FD8A2F;
+        color:$color-naranjish;
         font-size:medium; //codigo repetido, rever
     
         font-weight:800;
     }
 
     &__caract{
-        color:#FD8A2F;
+        color:$color-naranjish;
         font-size:medium;
     }
 
@@ -134,7 +135,7 @@ input:focus::placeholder {
 } 
  
 //smartphones y tablets 
-@media (min-width:$breakpoint-mobile){ 
+@media (max-width:$breakpoint-small){ 
 //@media (max-width:1100px)  ){ // antes de laptop
     .footer-main, .footer-bottom__msg{ 
        font-size:em(13);
@@ -169,7 +170,7 @@ input:focus::placeholder {
 }
 
 
-@media (min-width:$breakpoint-desktop){
+@media (min-width:$breakpoint-medium){
     .footer-bottom{
         margin-left:20%;
     }

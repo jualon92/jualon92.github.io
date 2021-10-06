@@ -781,7 +781,7 @@ input:focus::placeholder {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 770px) {
   .footer-bottom {
     margin-left: 20%;
   }
@@ -790,7 +790,7 @@ input:focus::placeholder {
   }
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 2400px) {
   .footer-main {
     font-size: 1.2rem;
   }
