@@ -162,10 +162,10 @@ input:focus::placeholder {
 } 
  
 //smartphones y tablets 
-@media (max-width:769){ 
+@media (max-width:769px){ 
 //@media (max-width:1100px)  ){ // antes de laptop
     .footer-main, .footer-bottom__msg{ 
-       font-size:em(15);
+       font-size:em(10);
     }
 
     .footer-bottom{
@@ -175,7 +175,9 @@ input:focus::placeholder {
 
     .footer-box{ 
     //   gap:1.5em; // no quiero que desaparezcan!
-        flex-wrap: wrap;
+    display:flex;    
+    flex-direction: row;
+    flex-wrap: wrap;
         margin-right: 0.5rem;
          
         margin-left:0.5rem;
@@ -200,13 +202,13 @@ input:focus::placeholder {
 }
 
 
-@media (max-width:1280px){ // laptops y desktops < 1920x1080p
+@media (min-width:769px) and (max-width:1280px){ // laptops  
     .footer-bottom{
         margin-top:0;
     }
     .footer-box{
-        margin-right:11%;
-        margin-left:11%;
+        margin-right:9%;
+        margin-left:9%;
     }
 
     .footer-main{
@@ -215,7 +217,7 @@ input:focus::placeholder {
     }
 
     .footer-box__titulo{
-        font-size:1rem;
+        font-size:1.1rem;
     }
 
     .footer-bottom__msg{

@@ -833,15 +833,22 @@ input:focus::placeholder {
   margin-top: 4%;
 }
 
-@media (max-width: 769) {
+@media (max-width: 769px) {
   .footer-main, .footer-bottom__msg {
-    font-size: 0.9375rem;
+    font-size: 0.625rem;
   }
   .footer-bottom {
     padding-left: 0;
     margin-left: 0.5rem;
   }
   .footer-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-right: 0.5rem;
@@ -862,19 +869,19 @@ input:focus::placeholder {
   }
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 769px) and (max-width: 1280px) {
   .footer-bottom {
     margin-top: 0;
   }
   .footer-box {
-    margin-right: 11%;
-    margin-left: 11%;
+    margin-right: 9%;
+    margin-left: 9%;
   }
   .footer-main {
     font-size: 0.9rem;
   }
   .footer-box__titulo {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .footer-bottom__msg {
     font-size: 0.7rem;
