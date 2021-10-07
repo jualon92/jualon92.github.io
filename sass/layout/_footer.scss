@@ -15,7 +15,7 @@ $margen-centrado:15%; // si se quiere cambiar margen de footer main y bottom con
     display:block;
 }
 
-i{
+i{ 
     color:#D4D4D4;
     
     font-size:2rem;
@@ -42,10 +42,10 @@ i{
 .footer-box{
  //   margin-left:em(276.781); /*px codigo pag*/
   //   margin-right:em(276.781);
-    margin-left:$margen-centrado; // me gusta como se comporta % al bajar o  subir res (% relative to container size)
+    margin-left:$margen-centrado; // me gusta como se comporta el margen con % al bajar o  subir css res (% relative to container size)
     margin-right:$margen-centrado;
     color:white;
-    display:flex; /* rever, manera de achicarse con flex:*/
+    display:flex; 
     flex-direction:row;
     justify-content: space-between;
     
@@ -67,7 +67,7 @@ i{
         &::after{
             content: ""; //necesario para que after funcione
             border-bottom:2px solid orangered;
-            //width:18%; //al tomar porcentaje depende del largo de h1
+            //width:18%; //al tomar porcentaje depende del largo de bloque
             width:em(18);
             display:block;
             border-width: 1.5px;
@@ -81,19 +81,16 @@ i{
         text-decoration: none; // sin underline
     }
 
-    &__horario{
+    &__horario, &__tel, &__caract{
         color:$color-naranjish;
     }
 
     &__tel{
-        color:$color-naranjish;
         font-size:medium; //codigo repetido, rever
-    
         font-weight:800;
     }
 
     &__caract{
-        color:$color-naranjish;
         font-size:medium;
     }
 
@@ -147,19 +144,18 @@ input:focus::placeholder {
     padding-bottom:4%;
     margin-left:$margen-centrado;
      
+    &__msg{
+        font-family: "Rajdhani", sans-serif; /* font candidato var o clase, en carpeta typo*/
+        font-weight: 200; //puede ir arriba/
+        letter-spacing: 0.02em; 
+         
+        font-size:em(11); /*preferi no usar px para no necesitar tanto media queries*/
+        line-height: 1.42857em;
+        margin-top:4%;
+    }
 }
 
-.footer-bottom__msg{
-    
-    font-family: "Rajdhani", sans-serif; /* font candidato var o clase, en carpeta typo*/
-    font-weight: 200; //puede ir arriba/
-    letter-spacing: 0.02em; 
-     
-    font-size:em(11); /*preferi no usar px para no necesitar tanto media queries*/
-    line-height: 1.42857em;
-    margin-top:4%;
-   
-} 
+ 
  
 //smartphones y tablets 
 @media (max-width:769px){ 
@@ -168,6 +164,7 @@ input:focus::placeholder {
        font-size:em(10);
     }
 
+     
     .footer-bottom{
         padding-left:0;
         margin-left:0.5rem;
@@ -178,26 +175,27 @@ input:focus::placeholder {
     display:flex;    
     flex-direction: row;
     flex-wrap: wrap;
-        margin-right: 0.5rem;
+    margin-right: 0.5rem;
          
-        margin-left:0.5rem;
-        &__ofertas{
-            border-style:none;
-            border-width:0;
-            padding-left:0;
-        }
+    margin-left:0.5rem; /*rever, que quede mas legible*/
+    margin-top:6%;
+    margin-bottom:2%;
+    &__ofertas{
+        border-style:none;
+        border-width:0;
+        padding-left:0;
     }
-
-    .footer-box__ayuda, .footer-box__info{
+ 
+    &__ayuda, &__info{
         flex:50%; // flex basis 50% del width 
-        
-    }
-
-    .footer-box__titulo{
+        margin-bottom:6%;
+    }  
+    
+    &__titulo{
         font-size:1.2rem;
     }
 
-     
+    }
 
 }
 
@@ -209,20 +207,20 @@ input:focus::placeholder {
     .footer-box{
         margin-right:9%;
         margin-left:9%;
+
+        &__titulo{
+            font-size:1.1rem;
+        }
+
+        &__msg{
+            font-size:$letra-mediana;
+        }
     }
 
     .footer-main{
-        font-size:0.9rem;
-         
+        font-size:0.9rem;  
     }
-
-    .footer-box__titulo{
-        font-size:1.1rem;
-    }
-
-    .footer-bottom__msg{
-        font-size:$letra-mediana;
-    }
+ 
 }
 
  

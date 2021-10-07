@@ -697,7 +697,6 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* rever, manera de achicarse con flex:*/
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -737,18 +736,16 @@ i {
   text-decoration: none;
 }
 
-.footer-box__horario {
+.footer-box__horario, .footer-box__tel, .footer-box__caract {
   color: #FD8A2F;
 }
 
 .footer-box__tel {
-  color: #FD8A2F;
   font-size: medium;
   font-weight: 800;
 }
 
 .footer-box__caract {
-  color: #FD8A2F;
   font-size: medium;
 }
 
@@ -853,6 +850,9 @@ input:focus::placeholder {
         flex-wrap: wrap;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
+    /*rever, que quede mas legible*/
+    margin-top: 6%;
+    margin-bottom: 2%;
   }
   .footer-box__ofertas {
     border-style: none;
@@ -863,6 +863,7 @@ input:focus::placeholder {
     -webkit-box-flex: 50%;
         -ms-flex: 50%;
             flex: 50%;
+    margin-bottom: 6%;
   }
   .footer-box__titulo {
     font-size: 1.2rem;
@@ -877,14 +878,14 @@ input:focus::placeholder {
     margin-right: 9%;
     margin-left: 9%;
   }
-  .footer-main {
-    font-size: 0.9rem;
-  }
   .footer-box__titulo {
     font-size: 1.1rem;
   }
-  .footer-bottom__msg {
+  .footer-box__msg {
     font-size: 0.7rem;
+  }
+  .footer-main {
+    font-size: 0.9rem;
   }
 }
 
