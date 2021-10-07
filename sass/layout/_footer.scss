@@ -1,7 +1,27 @@
 $breakpoint-small:769px;
-$breakpoint-medium:770px;
+$breakpoint-laptop:770px;
 $breakpoint-high:2400px;
 $color-naranjish:#FD8A2F;
+$letra-mediana:0.7rem;
+$letra-grande:1.1rem;
+$letra-grande2:1.6rem;
+
+$letra-normal:em(10); // funcion para devolver conversion de px a em, los valores inicialmente fueron puestos en px, y son pasados como parametro.
+$margen-centrado:15%; // si se quiere cambiar margen de footer main y bottom con cambiar esto seria suf, interface
+
+.footer-top{
+    background-color: $gris-claro;
+    height:2.2rem;
+    display:block;
+}
+
+i{
+    color:#D4D4D4;
+    
+    font-size:2rem;
+    
+}
+
 
 .footer-main{ /* basado en https://www.armytech.com.ar/ footer main */
     background-color: #565656;
@@ -13,7 +33,7 @@ $color-naranjish:#FD8A2F;
     font-family: "Rajdhani", sans-serif; /* font candidato var o clase, en carpeta typo*/
     font-weight: 200; //puede ir arriba/
     letter-spacing: 0.02em; 
-    font-size: em(10); // em seria mas responsive que pixel. se creo funcion para adaptar px a em
+    font-size: em(14); // em seria mas responsive que pixel. se creo funcion para adaptar px a em
     line-height: 1.42857em;
   //  padding-left:276.781px ;
   //  padding-right:276.781px ;
@@ -22,14 +42,13 @@ $color-naranjish:#FD8A2F;
 .footer-box{
  //   margin-left:em(276.781); /*px codigo pag*/
   //   margin-right:em(276.781);
-    margin-left:20%; // me gusta como se comporta % al bajar o  subir res (% relative to container size)
-    margin-right:20%;
+    margin-left:$margen-centrado; // me gusta como se comporta % al bajar o  subir res (% relative to container size)
+    margin-right:$margen-centrado;
     color:white;
     display:flex; /* rever, manera de achicarse con flex:*/
     flex-direction:row;
     justify-content: space-between;
-   
-
+    
     &__info, &__lista > li{ /*rever*/
         margin-bottom:em(6);
     }
@@ -40,7 +59,8 @@ $color-naranjish:#FD8A2F;
 
     &__titulo{
         padding-bottom:4px;
-        font-size: 1.2em;
+        font-size: 1.1rem;
+
         font-weight: 600;
         text-transform: uppercase;
 
@@ -91,17 +111,22 @@ $color-naranjish:#FD8A2F;
         width:90%;
     }
 
-    &__enviar{
-        text-transform: capitalize;
+    &__btn-enviar{ //btn-enviar
+         
         margin:0 auto;
         background-color: white;
         border-radius: 6px;
         border-style: none;
         padding:5px;
-        margin-left:60%;
+        margin-left:50%;
         margin-top:2%;
+        padding-left:15px;
+        padding-right:15px;    
     }
 
+    &__social a{
+        text-decoration: none;
+    }
 
 
 }
@@ -119,8 +144,8 @@ input:focus::placeholder {
     color:grey;
     
     display:inline-block;
-    padding-bottom:1%;
-    margin-top:1%;
+    padding-bottom:4%;
+    margin-left:$margen-centrado;
      
 }
 
@@ -129,28 +154,31 @@ input:focus::placeholder {
     font-family: "Rajdhani", sans-serif; /* font candidato var o clase, en carpeta typo*/
     font-weight: 200; //puede ir arriba/
     letter-spacing: 0.02em; 
-    font-size:em(10); /*preferi no usar px para no necesitar tanto media queries*/
+     
+    font-size:em(11); /*preferi no usar px para no necesitar tanto media queries*/
     line-height: 1.42857em;
-  
+    margin-top:4%;
+   
 } 
  
 //smartphones y tablets 
-@media (max-width:$breakpoint-small){ 
+@media (max-width:769){ 
 //@media (max-width:1100px)  ){ // antes de laptop
     .footer-main, .footer-bottom__msg{ 
-       font-size:em(13);
+       font-size:em(15);
     }
 
     .footer-bottom{
         padding-left:0;
+        margin-left:0.5rem;
     }
 
     .footer-box{ 
     //   gap:1.5em; // no quiero que desaparezcan!
         flex-wrap: wrap;
-        margin-right: 0.4em;
-        margin-left: 0.4em;
-        
+        margin-right: 0.5rem;
+         
+        margin-left:0.5rem;
         &__ofertas{
             border-style:none;
             border-width:0;
@@ -164,24 +192,43 @@ input:focus::placeholder {
     }
 
     .footer-box__titulo{
-        font-size:0.8rem;
-    }
-
-}
-
-
-@media (min-width:$breakpoint-medium){
-    .footer-bottom{
-        margin-left:20%;
-    }
-    
-    .footer-main{
-        font-size:0.8rem;
-    }
-}
- 
-@media (min-width:$breakpoint-high){
-    .footer-main{
         font-size:1.2rem;
     }
+
+     
+
 }
+
+
+@media (max-width:1280px){ // laptops y desktops < 1920x1080p
+    .footer-bottom{
+        margin-top:0;
+    }
+    .footer-box{
+        margin-right:11%;
+        margin-left:11%;
+    }
+
+    .footer-main{
+        font-size:0.9rem;
+         
+    }
+
+    .footer-box__titulo{
+        font-size:1rem;
+    }
+
+    .footer-bottom__msg{
+        font-size:$letra-mediana;
+    }
+}
+
+ 
+
+@media (min-width:$breakpoint-high){
+    .footer-main{
+        font-size:$letra-grande2;
+    }
+}
+
+
