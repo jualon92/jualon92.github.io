@@ -515,7 +515,9 @@ body {
 }
 
 .search-bar__carrito-img {
+  margin-left: 1rem;
   max-width: 100%;
+  font-size: 2.2rem;
 }
 
 .search-bar__search-bar__carrito-link {
@@ -913,6 +915,24 @@ input:focus::placeholder {
 @media (min-width: 2400px) {
   .footer-main, .footer-box__titulo, .footer-bottom__msg {
     font-size: 2.6rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    opacity: 0.75;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
+  }
+  .menu-toggle__label > span {
+    /*en modo oscuro no se ve bien el negro*/
+    color: white;
+  }
+  .menu-toggle__label {
+    background-color: grey;
   }
 }
 

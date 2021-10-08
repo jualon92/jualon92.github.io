@@ -232,3 +232,24 @@ input:focus::placeholder {
 }
 
 
+//en modo oscuro el
+@media (prefers-color-scheme: dark){
+    img{
+        opacity: 0.75;
+        transition: opacity .5s ease-in-out;
+
+    }
+
+    img:hover{
+        opacity:1;
+    }
+
+    .menu-toggle__label > span{ /*en modo oscuro no se ve bien el negro*/
+        color:white;
+    }
+
+    .menu-toggle__label{
+        background-color: grey;
+    }
+
+}
