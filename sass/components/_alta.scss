@@ -26,7 +26,7 @@
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-    width:110%; // ver este tema
+    width:40rem; // ver este tema
     
     height:40%;
 }
@@ -46,3 +46,21 @@
 }
 
  
+
+@media (max-width:769px){
+     
+   
+    /* no hacer, cascada, influye todos los forms
+    form input{
+        margin-left:80px; 
+    }*/ 
+ 
+    #pfotos{
+        overflow: hidden;
+    } 
+    
+    .alta__boton-ui{
+ 
+        justify-content:flex-start;
+    }
+  }
