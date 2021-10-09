@@ -927,12 +927,12 @@ input:focus::placeholder {
   img:hover {
     opacity: 1;
   }
-  .menu-toggle__label > span {
+  .menu-toggle__label span {
     /*en modo oscuro no se ve bien el negro*/
-    color: white;
+    background-color: white;
   }
   .menu-toggle__label {
-    background-color: grey;
+    background-color: #666666;
   }
 }
 

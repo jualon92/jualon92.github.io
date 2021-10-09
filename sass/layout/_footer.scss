@@ -222,7 +222,7 @@ input:focus::placeholder {
     }
  
 }
-
+ 
  
 
 @media (min-width:$breakpoint-high){
@@ -244,12 +244,12 @@ input:focus::placeholder {
         opacity:1;
     }
 
-    .menu-toggle__label > span{ /*en modo oscuro no se ve bien el negro*/
-        color:white;
+    .menu-toggle__label span{ /*en modo oscuro no se ve bien el negro*/
+        background-color: white;
     }
 
     .menu-toggle__label{
-        background-color: grey;
+        background-color: hsl(0, 0%, 40%);
     }
 
 }
