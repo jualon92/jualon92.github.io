@@ -164,7 +164,7 @@ input:focus::placeholder {
        font-size:em(10);
     }
 
-     
+    
     .footer-bottom{
         padding-left:0;
         margin-left:0.5rem;
@@ -192,7 +192,8 @@ input:focus::placeholder {
     }  
     
     &__titulo{
-        font-size:1.2rem;
+        font-size:0.9rem; //para que haga salto de linea
+        
     }
 
     }

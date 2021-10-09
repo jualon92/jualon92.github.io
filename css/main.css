@@ -384,7 +384,33 @@ body {
   }
 }
 
-/*si pongo &nav-color:red; no seria muy reutilizable*/
+/*
+$mapa-paletas: ( //puede hacerce un map que guarda las paletas como map dentro, pero me parece un dolor de cabeza
+  "natura-colores":(
+    'color-header':$gris-frio, 
+    'color-headerbg': $gris-frio,
+    'searchbar-primary': #C9D8B6,
+    'color-buscar': #F1ECC3,
+  ),
+  "naranja-gris": (
+    'color-header':$naranja-vitamina,
+    'color-headerbg':$naranja-vitamina,
+    'searchbar-primary':hsl(197, 10%, 65%),
+    'color-buscar':hsl(197, 10%, 55%),
+  )
+);
+*/
+/*
+$color-header:#515E63; 
+$color-headerbg:#515E63;
+//$searchbar-primary:#F1F7E7;
+$searchbar-primary:#C9D8B6;  
+$color-buscar:#F1ECC3; 
+ /*
+$color-header:#FD611A;  
+$color-headerbg:#565656;
+ searchbar-primary:hsl(197, 10%, 65%); 
+ */
 /*********************************
             HEADER
 *********************************/
@@ -423,11 +449,7 @@ body {
               NAV BAR
   *********************************/
 .nav-bar {
-  background-color: mediumturquoise;
-  /*&__nav-item {
-    text-align: center;
-    background-color: pink; 
-  }*/
+  background-color: #515E63;
 }
 
 .nav-bar__nav-list {
@@ -444,10 +466,11 @@ body {
 .nav-bar__nav-link {
   /*inline no muestra padding top padding bottom*/
   display: block;
-  background-color: purple;
+  background-color: get;
   color: #fff;
   padding: 1em 2em;
   text-decoration: none;
+  color: black;
 }
 
 .nav-bar__nav-link:hover, .nav-bar__nav-link:focus {
@@ -458,7 +481,7 @@ body {
               SEARCH BAR
   *********************************/
 .search-bar {
-  background-color: olivedrab;
+  background-color: #C9D8B6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,12 +494,15 @@ body {
   padding: 0.65em;
 }
 
+.search-bar__logo-img {
+  width: 60px;
+}
+
 .search-bar__logo-container {
-  background-color: yellow;
+  padding: 0.3125rem;
 }
 
 .search-bar__form-container {
-  background-color: gold;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   display: -webkit-box;
@@ -488,11 +514,11 @@ body {
 }
 
 .search-bar__form-label {
-  background-color: greenyellow;
+  background-color: #F1ECC3;
 }
 
 .search-bar__form-search {
-  background-color: #316282;
+  background-color: white;
   width: 90%;
   /*
     &:hover, &:focus{  
@@ -511,13 +537,16 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 5em;
           flex: 0 0 5em;
-  background-color: goldenrod;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .search-bar__carrito-img {
   margin-left: 1rem;
   max-width: 100%;
   font-size: 2.2rem;
+  color: white;
 }
 
 .search-bar__search-bar__carrito-link {
@@ -889,7 +918,7 @@ input:focus::placeholder {
     margin-bottom: 6%;
   }
   .footer-box__titulo {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -956,5 +985,16 @@ input:focus::placeholder {
 @media (min-width: 1200px) {
   .cards-container {
     gap: 2em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    opacity: 0.75;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
   }
 }

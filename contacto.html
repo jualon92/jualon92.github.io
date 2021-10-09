@@ -7,47 +7,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="sass\vendors\fontello-dabf156c\css\fontello.css">
 </head>
 
 <body class="contacto-page">
 
-    <header class="main-header">
+</head>
+<header class="main-header">
+    <input type="checkbox" id="menu" />
+
+    <nav class="nav-bar">
+        <!-- acomodar con unordered list mas simple para nav links que inline  -->
+
+        <ul class="nav-bar__nav-list">
+            <li class="nav-bar__nav-item">
+                <a class="nav-bar__nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-bar__nav-item">
+                <a class="nav-bar__nav-link" href="alta.html">Alta</a>
+            </li>
+            <li class="nav-bar__nav-item">
+                <a class="nav-bar__nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-bar__nav-item">
+                <a class="nav-bar__nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="search-bar">
+        <div class="search-bar__logo-container">Logo</div>
+        <form class="search-bar__form-container">
+            <label class="search-bar__form-label" for="busqueda">Buscar</label>
+            <input class="search-bar__form-search" id="busqueda" type="search"
+                placeholder="Buscar productos, marcas y más..." />
+            <input class="search-bar__form-submit" type="submit" value="Buscar" />
+        </form>
+
+        <a href="carrito.html" class="search-bar__carrito-container">
+            <i class="icon-basket search-bar__carrito-img"></i>
+            <!-- <img class="search-bar__carrito-img" src="img/productos/carrito.jpg" alt="imagen de carrito" /> -->
+        </a>
+        <span class="tiptext">Carrito</span>
 
 
-        <nav class="nav-bar">
-            <ul class="nav-bar__nav-list">
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="alta.html">Alta</a>
-                </li>
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="contacto.html">Contacto</a>
-                </li>
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="nosotros.html">Nosotros</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <div class="search-bar__logo-container">Logo</div>
-            <form class="search-bar__form-container">
-                <label class="search-bar__form-label" for="busqueda">Buscar</label>
-                <input class="search-bar__form-search" id="busqueda" type="search"
-                    placeholder="Buscar productos, marcas y más..." />
-                <input class="search-bar__form-submit" type="submit" value="Buscar" />
-            </form>
-
-            <a href="carrito.html" class="search-bar__carrito-container">
-                <img class="search-bar__carrito-img" src="img/productos/carrito.jpg" alt="imagen de carrito" />
-            </a>
-            <span class="tiptext">Carrito</span>
-
-
-
+        <div class="menu-toggle">
+            <label class="menu-toggle__label" for="menu">
+                <span class="menu-toggle__pan-arriba"></span>
+                <span class="menu-toggle__medallon"></span>
+                <span class="menu-toggle__pan-abajo"></span>
+            </label>
         </div>
-    </header>
+    </div>
+
+</header>
 
     <main>
         <div class="contacto">
