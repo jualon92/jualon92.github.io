@@ -571,7 +571,6 @@ $color-headerbg:#565656;
 .search-bar__form-search {
   /* prefiero que no este nesteado en .search-bar*/
   padding: 5px 0 5px 10px;
-  margin-left: 40px;
   border-radius: 5px;
   border-left-color: transparent;
 }
