@@ -414,6 +414,12 @@ $color-headerbg:#565656;
 /*********************************
             HEADER
 *********************************/
+* {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
 .main-header {
   /*flex permite reacomodar flow al bajar resolucion mediante media */
   display: -webkit-box;
@@ -588,22 +594,18 @@ $color-headerbg:#565656;
 }
 
 .search-bar__form-search::-webkit-input-placeholder {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #333333;
 }
 
 .search-bar__form-search:-ms-input-placeholder {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #333333;
 }
 
 .search-bar__form-search::-ms-input-placeholder {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #333333;
 }
 
 .search-bar__form-search::placeholder {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #333333;
 }
 
@@ -651,12 +653,30 @@ $color-headerbg:#565656;
 }
 
 @media (max-width: 768px) {
-  /* hasta 768px hace esto*/
+  /* hasta max 768px hace esto, celulares, tablets*/
   .main-header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  .search-bar {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .search-bar__logo-container {
+    margin-right: auto;
+  }
+  .search-bar__form-submit {
+    margin-left: -2px;
+  }
+  .search-bar__form-container {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   .menu-toggle {
     display: block;

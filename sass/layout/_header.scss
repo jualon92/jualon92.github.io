@@ -1,3 +1,5 @@
+ 
+
 //colores
 $rosado:deeppink; 
 //$violeta:purple;
@@ -67,6 +69,12 @@ $color-headerbg:#565656;
 /*********************************
             HEADER
 *********************************/
+ 
+*{
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+    letter-spacing: 0.02em;
+}
 .main-header {/*flex permite reacomodar flow al bajar resolucion mediante media */
   display: flex;
   flex-direction: column;
@@ -95,10 +103,10 @@ $color-headerbg:#565656;
               NAV BAR
   *********************************/
 .nav-bar {
-  
+
    // background-color: $color-headerbg;
     background-color: get-color("color-headerbg"); 
-
+    
   &__nav-list { /*con flex requiere menos codigo*/
     display: flex;
     list-style-type: none;
@@ -223,7 +231,7 @@ $color-headerbg:#565656;
         border-color: #316282;
     }
     &::placeholder{
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
+       // font-family:Verdana, Geneva, Tahoma, sans-serif;
         color:hsl(0, 0%, 20%);
     }
 }
@@ -270,9 +278,26 @@ $color-headerbg:#565656;
     bottom: 0.8em;
   }
 }
-@media (max-width: 768px) { /* hasta 768px hace esto*/
+@media (max-width: 768px) { /* hasta max 768px hace esto, celulares, tablets*/
   .main-header {
     flex-direction: column-reverse;
+  }
+
+  .search-bar{
+    flex-wrap:wrap;
+    justify-content: flex-end;
+    
+    &__logo-container{
+      margin-right: auto;
+    }
+    
+    &__form-submit{
+      margin-left:-2px;
+    }
+
+    &__form-container{
+      order:3;
+    }
   }
 
   .menu-toggle {
@@ -281,10 +306,10 @@ $color-headerbg:#565656;
 
   .nav-bar {
     display: none;
-  }
 
-  .nav-bar__nav-list {
-    flex-direction: column;
+    &__nav-list {
+      flex-direction: column;
+    } 
   }
 
   .search-bar__carrito-container:hover + .tiptext { /*rever, seria mejor delegarlo a js*/
