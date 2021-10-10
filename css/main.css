@@ -490,6 +490,10 @@ $color-headerbg:#565656;
           justify-content: space-between;
 }
 
+.search-bar__icon-search {
+  font-size: 20px;
+}
+
 .search-bar__logo-container, .search-bar__form-container {
   padding: 0.65em;
 }
@@ -527,7 +531,16 @@ $color-headerbg:#565656;
 }
 
 .search-bar__form-submit {
-  background-color: #65BCEF;
+  background-color: #FEBD69;
+  margin-left: -40px;
+  width: 42px;
+  z-index: 12;
+  border-style: inset;
+  border-left-color: transparent;
+}
+
+.search-bar__form-submit:hover {
+  background-color: #F3A847;
 }
 
 .search-bar__carrito-container {
@@ -557,8 +570,10 @@ $color-headerbg:#565656;
 
 .search-bar__form-search {
   /* prefiero que no este nesteado en .search-bar*/
-  padding: 5px 10px 5px 10px;
+  padding: 5px 0 5px 10px;
+  margin-left: 40px;
   border-radius: 5px;
+  border-left-color: transparent;
 }
 
 .search-bar__form-search:focus {

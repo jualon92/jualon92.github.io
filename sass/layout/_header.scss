@@ -4,6 +4,7 @@ $rosado:deeppink;
 $rojo-apagado:hsl(0, 100%, 40%);  
 $naranja-vitamina:#FD611A;
 $gris-frio:#515E63;
+$amarillo-vainilla:#FEBD69;
  
 //paletas
 /*
@@ -131,6 +132,10 @@ $color-headerbg:#565656;
   display: flex;
   justify-content: space-between;
    
+  &__icon-search{
+    font-size:20px;
+  }
+
 
   &__logo-container,
   &__form-container {
@@ -159,7 +164,7 @@ $color-headerbg:#565656;
   &__form-search {
     background-color:white;
     width: 90%;
-
+     
     /*
     &:hover, &:focus{  
         background-color:hsl(328, 100%, 30%);
@@ -168,8 +173,18 @@ $color-headerbg:#565656;
 
   &__form-submit {
    // background-color: darkslategray;
-   background-color: #65BCEF;
-}
+  // background-color: #65BCEF;
+  background-color:$amarillo-vainilla;
+    margin-left:-40px; // opuesto a margin 40px(mueve a izq en vez de der), para quedar en el padding de barra busqueda
+    width:42px;
+    z-index: 12; // lupa on top
+    border-style:inset;
+    border-left-color: transparent;
+   &:hover{ //rever nesting
+    background-color:#F3A847;
+   }
+
+  }
 
   &__carrito-container {
     display:flex;
@@ -192,8 +207,11 @@ $color-headerbg:#565656;
 
 .search-bar__form-search{ /* prefiero que no este nesteado en .search-bar*/
    
-   padding:5px 10px 5px 10px;
+   padding:5px 0 5px 10px; // 
+  margin-left:  40px;
+    
    border-radius:5px;
+   border-left-color:transparent;
 
     &:focus{
        filter:brightness(60%); /*si se cambia el color de barra busqueda, brigthness lo cambia*/
