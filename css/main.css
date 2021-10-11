@@ -96,6 +96,66 @@ body {
   text-align: right;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+.card__article:hover .card__btn-comprar {
+  visibility: visible;
+  opacity: 1;
+}
+
 .card {
   outline: none;
   -webkit-box-flex: 1;
@@ -115,6 +175,19 @@ body {
   border-top-right-radius: 5px;
   -webkit-transition: all .2s;
   transition: all .2s;
+  text-decoration: none;
+}
+
+.card__btn-comprar {
+  padding: 10px 20px 10px 20px;
+  border-radius: 4px;
+  color: white;
+  background-color: #FD611A;
+  transition: opacity 0.5s Ease-out, visibility 0.5s;
+  -webkit-transition: opacity 0.5s Ease-out, visibility 0.5s;
+  -moz-transition: opacity 0.5s Ease-out, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .card:hover, .card:focus {
@@ -414,12 +487,14 @@ $color-headerbg:#565656;
 /*********************************
             HEADER
 *********************************/
-* {
+/*
+*{
+  text-decoration:none;
+  outline: none;;
   font-family: "Rajdhani", sans-serif;
   font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
+    letter-spacing: 0.02em; 
+}*/
 .main-header {
   /*flex permite reacomodar flow al bajar resolucion mediante media */
   display: -webkit-box;
@@ -1002,6 +1077,16 @@ input:focus::placeholder {
 .section-cards {
   background-color: #f1f2f3;
   padding: 1em;
+}
+
+.btncomprar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 150px;
 }
 
 .cards-container {

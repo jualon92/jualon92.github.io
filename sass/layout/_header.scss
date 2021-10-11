@@ -4,7 +4,6 @@
 $rosado:deeppink; 
 //$violeta:purple;
 $rojo-apagado:hsl(0, 100%, 40%);  
-$naranja-vitamina:#FD611A;
 $gris-frio:#515E63;
 $amarillo-vainilla:#FEBD69;
  
@@ -32,7 +31,7 @@ $natura-colores: (
   'searchbar-primary': #C9D8B6,
   'color-buscar': #F1ECC3,
 );
-
+ 
 $naranja-gris: (
   'color-header':#FD611A,
   'color-headerbg':#FD611A,
@@ -69,12 +68,14 @@ $color-headerbg:#565656;
 /*********************************
             HEADER
 *********************************/
- 
+ /*
 *{
+  text-decoration:none;
+  outline: none;;
   font-family: "Rajdhani", sans-serif;
   font-weight: 500;
-    letter-spacing: 0.02em;
-}
+    letter-spacing: 0.02em; 
+}*/
 .main-header {/*flex permite reacomodar flow al bajar resolucion mediante media */
   display: flex;
   flex-direction: column;
@@ -188,8 +189,10 @@ $color-headerbg:#565656;
     z-index: 12; // lupa on top
     border-style:inset;
     border-left-color: transparent;
+    
    &:hover{ //rever nesting
     background-color:#F3A847;
+     
    }
 
   }

@@ -1,3 +1,14 @@
+$tiempo-fade:0.5s; 
+.card__article:hover .card__btn-comprar{  
+    
+     visibility:visible;
+     opacity:1
+}  
+
+
+
+
+
 .card {
     outline: none;
     flex-grow: 1;
@@ -12,9 +23,29 @@
     box-shadow: 0px 1px 5px rgba(0, 0, 0, .2), 0 0 3px rgba(0, 0, 0, .4);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    
+    
     -moz-transition: all .2s;
     -webkit-transition: all .2s;
     transition: all .2s;
+    text-decoration: none; // parent de contenedor flex no tenga underline
+
+    &__btn-comprar{
+        padding:10px 20px 10px 20px;
+        border-radius: 4px;
+        color:white;
+        background-color: $naranja-vitamina;
+        
+        //transition se encarga del fade in/fade out por opacity y tambien de visibility(para evitar click)
+        //https://www.taccgl.org/blog/css-transition-opacity-for-fade-effects.html
+        transition: opacity $tiempo-fade Ease-out , visibility $tiempo-fade;
+        -webkit-transition: opacity $tiempo-fade Ease-out , visibility $tiempo-fade;
+        -moz-transition:opacity $tiempo-fade Ease-out ,visibility $tiempo-fade;
+       // transition-delay: 0.2s;
+        opacity: 0;
+        visibility : hidden;
+
+    }
     
     &:hover,
     &:focus {
