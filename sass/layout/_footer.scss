@@ -15,11 +15,10 @@ $margen-centrado:15%; // si se quiere cambiar margen de footer main y bottom con
     display:block;
 }
 
-i{  //aplica a todos los iconos, mala practica
+//i{   aplica a todos los iconos al sass crear main.css , mala practica
+.footer-box__social i{
     color:#D4D4D4;
-    
     font-size:2rem;
-    
 }
 
 
@@ -234,7 +233,7 @@ input:focus::placeholder {
 }
 
 
-//en modo oscuro el
+//en modo oscuro 
 @media (prefers-color-scheme: dark){
     img{
         opacity: 0.75;

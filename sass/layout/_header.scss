@@ -117,11 +117,12 @@ $color-headerbg:#565656;
 
   &__nav-link { /*inline no muestra padding top padding bottom*/
     display: block;
-    background-color: get;
+    //background-color: get;
     color: #fff;
     padding: 1em 2em;
     text-decoration: none;
-    color:black;
+    //color:black;
+    color:white;
   }
 
   &__nav-link:hover, &__nav-link:focus{   //que marque cual elijo  
@@ -166,6 +167,8 @@ $color-headerbg:#565656;
 
   &__form-label {
     background-color: get-color("color-buscar");
+    padding-right: 0.4rem; // no quede msj pegado a busq
+    
   }
 
   &__form-search {
@@ -184,10 +187,11 @@ $color-headerbg:#565656;
   background-color:$amarillo-vainilla;
     margin-left:-40px; // opuesto a margin 40px(mueve a izq en vez de der), para quedar en el padding de barra busqueda
     width:42px;
+    border-radius:3px;
     z-index: 12; // lupa on top
-    border-style:inset;
-    border-left-color: transparent;
-    
+    border-style:solid;
+   //  border-left-color: transparent;
+    border-top-color:black;
    &:hover{ //rever nesting
     background-color:#F3A847;
      
@@ -220,7 +224,8 @@ $color-headerbg:#565656;
   // margin-left:  40px;
     
    border-radius:5px;
-   border-left-color:transparent;
+    
+   //border-left-color:transparent;
 
     &:focus{
        filter:brightness(60%); /*si se cambia el color de barra busqueda, brigthness lo cambia*/
@@ -293,7 +298,7 @@ $color-headerbg:#565656;
     }
     
     &__form-submit{
-      margin-left:-2px;
+      margin-left:-6px; //3px 
     }
 
     &__form-container{
@@ -380,4 +385,21 @@ $color-headerbg:#565656;
     display:block;
 }
 
+@media (prefers-color-scheme: dark){ 
+    .search-bar__form-submit i{
+      color:white;  
+    }
+
+    .menu-toggle__label{
+      background-color: grey;
+    }
+
+    .search-bar__carrito-img{
+      background-color: hsl(0, 0%, 76%);
+    }
+
+    $paleta-seleccion: $naranja-gris; //rever
+}
   
+
+ 

@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Rajdhani", sans-serif;
 }
 
 @font-face {
@@ -187,7 +187,7 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-top: 35px;
+  margin-top: 33px;
 }
 
 .card__btn-heart {
@@ -207,7 +207,7 @@ body {
 }
 
 .card__btn-heart i {
-  color: black;
+  color: #333333;
   font-size: 20px;
   padding-right: 10px;
 }
@@ -604,11 +604,10 @@ $color-headerbg:#565656;
 .nav-bar__nav-link {
   /*inline no muestra padding top padding bottom*/
   display: block;
-  background-color: get;
   color: #fff;
   padding: 1em 2em;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .nav-bar__nav-link:hover, .nav-bar__nav-link:focus {
@@ -657,6 +656,7 @@ $color-headerbg:#565656;
 
 .search-bar__form-label {
   background-color: #F1ECC3;
+  padding-right: 0.4rem;
 }
 
 .search-bar__form-search {
@@ -672,9 +672,10 @@ $color-headerbg:#565656;
   background-color: #FEBD69;
   margin-left: -40px;
   width: 42px;
+  border-radius: 3px;
   z-index: 12;
-  border-style: inset;
-  border-left-color: transparent;
+  border-style: solid;
+  border-top-color: black;
 }
 
 .search-bar__form-submit:hover {
@@ -710,7 +711,6 @@ $color-headerbg:#565656;
   /* prefiero que no este nesteado en .search-bar*/
   padding: 5px 0 5px 10px;
   border-radius: 5px;
-  border-left-color: transparent;
 }
 
 .search-bar__form-search:focus {
@@ -803,7 +803,7 @@ $color-headerbg:#565656;
     margin-right: auto;
   }
   .search-bar__form-submit {
-    margin-left: -2px;
+    margin-left: -6px;
   }
   .search-bar__form-container {
     -webkit-box-ordinal-group: 4;
@@ -884,13 +884,25 @@ $color-headerbg:#565656;
   display: block;
 }
 
+@media (prefers-color-scheme: dark) {
+  .search-bar__form-submit i {
+    color: white;
+  }
+  .menu-toggle__label {
+    background-color: grey;
+  }
+  .search-bar__carrito-img {
+    background-color: #c2c2c2;
+  }
+}
+
 .footer-top {
   background-color: #f1f2f3;
   height: 2.2rem;
   display: block;
 }
 
-i {
+.footer-box__social i {
   color: #D4D4D4;
   font-size: 2rem;
 }

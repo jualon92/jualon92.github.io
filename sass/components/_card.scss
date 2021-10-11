@@ -37,7 +37,7 @@ $tiempo-fade:0.5s;
 .heart-container{
     display:flex;
     justify-content: flex-end;
-    margin-top: 35px;
+    margin-top: 33px; // 35ish
 }
 
 
@@ -65,7 +65,7 @@ $tiempo-fade:0.5s;
 
 
 .card__btn-heart i{
-    color:black;
+    color:hsl(0, 0%, 20%);
     font-size: 20px;
     padding-right: 10px;
 }
