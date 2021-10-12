@@ -5,13 +5,13 @@
 @import 'base/utilities';
 
 @import 'components/card';
-@import 'components/_contacto.scss';
-@import 'components/_alta.scss';
+@import 'components/contacto';
+@import 'components/alta';
 
 @import 'layout/header';
 @import 'layout/footer';
 @import 'pages/index';
-
+@import 'components/nosotros';
 @import 'vendors/fontello-dabf156c/css/fontello.css';
 
  

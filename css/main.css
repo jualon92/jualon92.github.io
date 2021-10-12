@@ -900,18 +900,6 @@ $color-headerbg:#565656;
   }
 }
 
-@media (prefers-dark-interface) {
-  .search-bar__form-submit i {
-    color: white;
-  }
-  .menu-toggle__label {
-    background-color: grey;
-  }
-  .search-bar__carrito-img {
-    color: #c2c2c2;
-  }
-}
-
 .footer-top {
   background-color: #f1f2f3;
   height: 2.2rem;
@@ -1191,4 +1179,67 @@ input:focus::placeholder {
   img:hover {
     opacity: 1;
   }
+}
+
+.c1 {
+  font-family: centra no2,sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.contenedor-about {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.c1 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.about-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.about__imagen {
+  padding-right: 2rem;
+}
+
+.about__marca {
+  font-weight: bolder;
+}
+
+.about__presentacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.presentacion__contenido-flex {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }

@@ -1,0 +1,47 @@
+
+.c1{
+    font-family: centra no2,sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+}
+
+.contenedor-about{ //https://every-layout.dev/layouts/cover/
+     
+    min-height: 100vh; 
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.c1{
+    box-sizing: border-box;
+    
+}
+
+.about-main{
+    display:flex;
+    flex-direction:row;
+}
+
+.about__imagen{
+    padding-right:2rem;
+}
+
+.about__marca{
+    font-weight: bolder;
+}
+
+.about__presentacion{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.presentacion__contenido-flex{
+    margin-top:em(96);
+    margin-bottom:em(96);
+}

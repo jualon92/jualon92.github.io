@@ -401,22 +401,6 @@ $color-headerbg:#565656;
       color: hsl(0, 0%, 76%);
     }
 
-    $paleta-seleccion: $naranja-gris; //rever
+    
 }
-  
-@media (prefers-dark-interface){ 
-  .search-bar__form-submit i{
-    color:white;  
-  }
-
-  .menu-toggle__label{
-    background-color: grey;
-  }
-
-  .search-bar__carrito-img{
-    color: hsl(0, 0%, 76%);
-  }
-
    
-}
- 
