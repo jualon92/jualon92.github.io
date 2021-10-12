@@ -775,6 +775,10 @@ $color-headerbg:#565656;
   top: 0.8em;
 }
 
+.menu-toggle__pan-arriba {
+  top: 12px;
+}
+
 .menu-toggle__medallon {
   top: 50%;
   margin-top: -0.15em;
@@ -892,7 +896,19 @@ $color-headerbg:#565656;
     background-color: grey;
   }
   .search-bar__carrito-img {
-    background-color: #c2c2c2;
+    color: #c2c2c2;
+  }
+}
+
+@media (prefers-dark-interface) {
+  .search-bar__form-submit i {
+    color: white;
+  }
+  .menu-toggle__label {
+    background-color: grey;
+  }
+  .search-bar__carrito-img {
+    color: #c2c2c2;
   }
 }
 

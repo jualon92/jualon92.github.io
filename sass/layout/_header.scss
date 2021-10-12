@@ -275,6 +275,9 @@ $color-headerbg:#565656;
     top: 0.8em;
   }
 
+  &__pan-arriba{
+    top:12px;
+  }
   &__medallon {
     top: 50%;
     margin-top: -0.15em;
@@ -395,11 +398,25 @@ $color-headerbg:#565656;
     }
 
     .search-bar__carrito-img{
-      background-color: hsl(0, 0%, 76%);
+      color: hsl(0, 0%, 76%);
     }
 
     $paleta-seleccion: $naranja-gris; //rever
 }
   
+@media (prefers-dark-interface){ 
+  .search-bar__form-submit i{
+    color:white;  
+  }
 
+  .menu-toggle__label{
+    background-color: grey;
+  }
+
+  .search-bar__carrito-img{
+    color: hsl(0, 0%, 76%);
+  }
+
+   
+}
  
