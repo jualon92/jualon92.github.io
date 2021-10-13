@@ -552,7 +552,7 @@ $color-headerbg:#565656;
   font-weight: 500;
     letter-spacing: 0.02em; 
 }*/
-.main-header {
+.main-header, .header-nos {
   /*flex permite reacomodar flow al bajar resolucion mediante media */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -575,7 +575,7 @@ $color-headerbg:#565656;
   background-color: yellow;
 }
 
-.main-header {
+.main-header, .header-nos {
   /* sticky header*/
   position: -webkit-sticky;
   position: sticky;
@@ -790,7 +790,7 @@ $color-headerbg:#565656;
 
 @media (max-width: 768px) {
   /* hasta max 768px hace esto, celulares, tablets*/
-  .main-header {
+  .main-header, .header-nos {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -1216,10 +1216,12 @@ input:focus::placeholder {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  gap: 42px;
 }
 
-.about__imagen {
-  padding-right: 2rem;
+.about-main, .presentacion__contenido-flex {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .about__marca {
@@ -1237,9 +1239,129 @@ input:focus::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #F1F1F2;
 }
 
 .presentacion__contenido-flex {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.about__texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.c1 p {
+  font-size: inherit;
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  font-family: centra no2,sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.about__logo {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/img/productos/pclogo.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/productos/pclogo.jpg");
+  color: black;
+  background-size: cover;
+  -ms-flex-item-align: normal;
+      align-self: normal;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.about__pc {
+  z-index: 0;
+}
+
+.about__contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.about__contenedor p, .about__contenedor h1 {
+  color: white;
+}
+
+.about__txt-humildes {
+  text-align-last: center;
+}
+
+.about__contenedor h1 {
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.about__txt-humildes {
+  color: white;
+}
+
+/*
+.about_historia{
+    overflow: hidden; 
+    border-right: .05em solid orange; 
+    white-space: nowrap;  
+    margin: 0 auto;  
+    letter-spacing: .25em; 
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+ 
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+ 
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  */
+.header-nos {
+  position: relative;
 }
