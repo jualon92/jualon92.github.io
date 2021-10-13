@@ -1,13 +1,27 @@
-
-.c1{
-    font-family: centra no2,sans-serif;
+ 
+.body-about{
+    font-family: sans-serif;
     font-weight: 300;
     line-height: 1.5;
     color: #000;
     -webkit-font-smoothing: antialiased;
-}
+    box-sizing: border-box;
 
-.contenedor-about{ //https://every-layout.dev/layouts/cover/
+    & p{
+        font-size: inherit;
+        line-height: 1.75;
+        text-rendering: optimizeLegibility;
+        margin-block-start: 1em; //rever
+        margin-block-end: 1em;
+         
+        -webkit-font-smoothing: antialiased;
+    }
+} 
+
+ 
+
+/*
+.about-contenedor{ //https://every-layout.dev/layouts/cover/
      
     min-height: 100vh; 
     display:flex;
@@ -15,65 +29,43 @@
     flex-direction: column;
 
 }
+ */
 
-.c1{
-    box-sizing: border-box;
-    
-}
-
-.about-main{
+.about-nosotros{
     display:flex;
     flex-direction:row;
     gap:42px; //podria tambien usarse margin 24px en c elemento
-}
-
-.about-main, .presentacion__contenido-flex {
     margin-top:em(96);
     margin-bottom:em(96);
-}
 
-.about__marca{
-    font-weight: bolder;
+        
 }
-
-.about__presentacion{
+ 
+ 
+.presentacion{
     display:flex;
     flex-direction: row;
     justify-content: center;
     background-color: #F1F1F2;
-}
 
+    &__contenido-flex{
+        display:flex;
+        flex-basis:50%;
+        margin-top:em(96);
+        margin-bottom:em(96);
+    }
+
+    &__marca{
+        font-weight:bold;
+    }
+
+
+}
 
  
-.presentacion__contenido-flex{
-    display:flex;
-    flex-basis:50%;
-}
-
-.about__texto{ 
-     
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
  
-
-.c1 p{
-    font-size: inherit;
-    line-height: 1.75;
-    text-rendering: optimizeLegibility;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-family: centra no2,sans-serif;
-    font-weight: 300;
-    line-height: 1.5;
-    color: #000;
-    -webkit-font-smoothing: antialiased;
-}
-
-.about__logo{  
+ 
+.txt-mid{  
     
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/img/productos/pclogo.jpg");
     color:black;
@@ -84,40 +76,42 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    
      
-     
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 50%;
+        color:white;
+
+
+    }
+
+    &__par2{
+        color:white;
+        text-align-last: center;
+    }
+
+    &__tittle{
+        line-height: 1;
+        margin-bottom: 1rem;
+        font-size:3rem;
+    }
 }
 
-.about__pc{
-    z-index: 0;
+ 
+ 
+.header-nos{ 
+    @extend .main-header;  
+    position:relative;
 }
 
-.about__contenedor{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-basis: 50%;
-}
+ 
 
-.about__contenedor p, .about__contenedor h1{
-    color:white;
-}
+ 
 
-.about__txt-humildes{
-   // padding-left: 15%; 
-  //  padding-right: 15%;
-    text-align-last: center; //justificado
-}
-
-.about__contenedor h1{
-    line-height: 1;
-    margin-bottom: 1rem;
-    font-size:3rem;
-}
-
-.about__txt-humildes{
-    color:white;
-}
+ 
 
  
 
@@ -147,8 +141,4 @@
   }
   */
 
-
-.header-nos{ 
-    @extend .main-header;  
-    position:relative;
-}
+ 
