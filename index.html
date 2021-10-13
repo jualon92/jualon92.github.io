@@ -9,65 +9,67 @@
     <link rel="stylesheet" href="css/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="sass\vendors\fontello-dabf156c\css\fontello.css">
+    <link rel="stylesheet" href="sass/vendors/fontello-dabf156c/css/fontello.css">
 
 </head>
-<header class="main-header">
-    <input type="checkbox" id="menu" />
-
-    <nav class="nav-bar">
-        <!-- acomodar con unordered list mas simple para nav links que inline  -->
-
-        <ul class="nav-bar__nav-list">
-            <li class="nav-bar__nav-item">
-                <a class="nav-bar__nav-link" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-bar__nav-item">
-                <a class="nav-bar__nav-link" href="alta.html">Alta</a>
-            </li>
-            <li class="nav-bar__nav-item">
-                <a class="nav-bar__nav-link" href="contacto.html">Contacto</a>
-            </li>
-            <li class="nav-bar__nav-item">
-                <a class="nav-bar__nav-link" href="nosotros.html">Nosotros</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="search-bar">
-        <div class="search-bar__logo-container">
-            <img class="search-bar__logo-img" src="img/productos/logo-foco2.png"
-                alt="logo de un foco de filamento prendido">
-        </div>
-        <form class="search-bar__form-container">
-            <label class="search-bar__form-label" for="busqueda">Buscar</label>
-            <input class="search-bar__form-search" id="busqueda" type="search"
-                placeholder="Buscar productos, marcas y más..." />
-            <!--   <input class="search-bar__form-submit" type="submit" value="Buscar" /> //button me permite darle imagen sin css weird trickery-->
-            <button class="search-bar__form-submit" type="submit" value="Buscar">
-                <i class="search-bar__icon-search icon-search"></i>
-            </button>
-        </form>
-
-        <a href="carrito.html" class="search-bar__carrito-container">
-            <i class="icon-basket search-bar__carrito-img"></i>
-            <!-- <img class="search-bar__carrito-img" src="img/productos/carrito.jpg" alt="imagen de carrito" /> -->
-        </a>
-        <span class="tiptext">Carrito</span>
-
-
-        <div class="menu-toggle">
-            <label class="menu-toggle__label" for="menu">
-                <span class="menu-toggle__pan-arriba"></span>
-                <span class="menu-toggle__medallon"></span>
-                <span class="menu-toggle__pan-abajo"></span>
-            </label>
-        </div>
-    </div>
-
-</header>
-
 
 <body>
+
+    <header class="main-header">
+        <input type="checkbox" id="menu" />
+
+        <nav class="nav-bar"><!-- acomodar con unordered list mas simple para nav links que inline  -->
+
+            <ul class="nav-bar__nav-list">
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="alta.html">Alta</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <div class="search-bar__logo-container">
+                <img class="search-bar__logo-img" src="img/productos/logo-foco2.png"
+                    alt="logo de un foco de filamento prendido">
+            </div>
+            <form class="search-bar__form-container">
+                <label class="search-bar__form-label" for="busqueda">Buscar</label>
+                <input class="search-bar__form-search" id="busqueda" type="search"
+                    placeholder="Buscar productos, marcas y más..." />
+                <!--   <input class="search-bar__form-submit" type="submit" value="Buscar" /> //button me permite darle imagen sin css weird trickery-->
+                <button class="search-bar__form-submit" type="submit" value="Buscar">
+                    <i class="search-bar__icon-search icon-search"></i>
+                </button>
+            </form>
+
+            <a href="carrito.html" class="search-bar__carrito-container">
+                <i class="icon-basket search-bar__carrito-img"></i>
+                <!-- <img class="search-bar__carrito-img" src="img/productos/carrito.jpg" alt="imagen de carrito" /> -->
+            </a>
+            <span class="tiptext">Carrito</span>
+
+
+            <div class="menu-toggle">
+                <label class="menu-toggle__label" for="menu">
+                    <span class="menu-toggle__pan-arriba"></span>
+                    <span class="menu-toggle__medallon"></span>
+                    <span class="menu-toggle__pan-abajo"></span>
+                </label>
+            </div>
+        </div>
+
+    </header>
+
+
+
 
     <main>
         <section class="section-cards">
@@ -82,12 +84,21 @@
                         <div class="card__image" style="
                   background-image: url('img/productos/notebook-lenovo.jpg');
                 ">
+                        </div>
 
-                        </div>
+                        <!--   <div class="heart-container">  nesting buttons dentro de anchor es poo poo
+                            <a class="card__btn-heart" href="http://example.com/">
+                                <i class="icon-heart"></i>  
+                            </a>  -->
+                        <!-- rever tema de icon clickable, probl sea mejor mediante js(),
+                         html5 no permite nested anchors o button dentro de anchor-->
+
                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
                         </div>
+
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
                             <div class="card__description">
@@ -96,16 +107,20 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
+                        <!--  <div class="btncomprar-container"> flex solo presta atencion a sus hijos 
                             <button class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </button> -->
+
+                        <div class="btncomprar-container"> <!--rever tema hacer clickable mediante html-->
+                            <div class="card__btn-comprar">
+                                sumar al carrito
+                            </div>
                         </div>
 
                     </article>
-
                 </a>
+
 
                 <a class="card" href="#">
                     <article class="card__article">
@@ -113,8 +128,9 @@
                   background-image: url('img/productos/apple-iphone-11-pro-max-liviano.jpg');
                 "></div>
                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
                         </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
@@ -125,10 +141,9 @@
                             </div>
                         </div>
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -137,8 +152,9 @@
                     <article class="card__article">
                         <div class="card__image" style="background-image: url('img/productos/camara-canon.jpg')"></div>
                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
                         </div>
 
                         <div class="card__content">
@@ -151,10 +167,9 @@
                         </div>
 
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -164,9 +179,10 @@
                         <div class="card__image" style="
                   background-image: url('img/productos/auriculares-sony.jpg');
                 "></div>
-                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
+                        <div class="heart-container">
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
                         </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
@@ -178,10 +194,9 @@
                         </div>
 
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -190,9 +205,10 @@
                     <article class="card__article">
                         <div class="card__image" style="background-image: url('img/productos/parlante-jbl.jpg')"></div>
                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
-                        </div>   
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
+                        </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
                             <div class="card__description">
@@ -203,10 +219,9 @@
                         </div>
 
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -216,9 +231,10 @@
                         <div class="card__image" style="
                   background-image: url('img/productos/google-nest-mini.jpg');
                 "></div>
-                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
+                        <div class="heart-container">
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
                         </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
@@ -230,10 +246,9 @@
                         </div>
 
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -243,9 +258,10 @@
                         <div class="card__image" style="
                   background-image: url('img/productos/samsung-galaxy-s21-plus-5g.jpg');
                 "></div>
-                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
+                        <div class="heart-container">
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
                         </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
@@ -257,10 +273,9 @@
                         </div>
 
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -269,9 +284,10 @@
                     <article class="card__article">
                         <div class="card__image" style="background-image: url('img/productos/drone-dji.jpg')"></div>
                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
-                        </div>     
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
+                        </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
                             <div class="card__description">
@@ -282,10 +298,9 @@
                         </div>
 
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -295,10 +310,11 @@
                         <div class="card__image" style="
                   background-image: url('img/productos/notebook-lenovo.jpg');
                 "></div>
-                     <div class="heart-container">
-                        <button class="card__btn-heart">
-                            <i class="icon-heart"></i> </button>
-                    </div>
+                        <div class="heart-container">
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
+                        </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
                             <div class="card__description">
@@ -309,10 +325,9 @@
                         </div>
 
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -322,9 +337,10 @@
                         <div class="card__image" style="
                   background-image: url('img/productos/dji-mavic-2-pro.jpg');
                 "></div>
-                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
+                        <div class="heart-container">
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
                         </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
@@ -336,10 +352,9 @@
                         </div>
 
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -348,9 +363,10 @@
                     <article class="card__article">
                         <div class="card__image" style="background-image: url('img/productos/camara-canon.jpg')"></div>
                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
-                        </div>     
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
+                        </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
                             <div class="card__description">
@@ -361,10 +377,9 @@
                         </div>
 
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -374,9 +389,10 @@
                         <div class="card__image" style="
                   background-image: url('img/productos/chromecast-google.jpg');
                 "></div>
-                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
+                        <div class="heart-container">
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
                         </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
@@ -388,10 +404,9 @@
                         </div>
 
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -400,8 +415,9 @@
                     <article class="card__article">
                         <div class="card__image" style="background-image: url('img/productos/parlante-jbl.jpg')"></div>
                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
                         </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
@@ -413,10 +429,9 @@
                         </div>
 
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -426,9 +441,10 @@
                         <div class="card__image" style="
                   background-image: url('img/productos/google-nest-mini.jpg');
                 "></div>
-                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
+                        <div class="heart-container">
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
                         </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
@@ -439,10 +455,9 @@
                             </div>
                         </div>
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
 
                     </article>
@@ -452,8 +467,9 @@
                     <article class="card__article">
                         <div class="card__image" style="background-image: url('img/productos/televisor-lg.jpg')"></div>
                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
                         </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
@@ -464,10 +480,9 @@
                             </div>
                         </div>
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -476,8 +491,9 @@
                     <article class="card__article">
                         <div class="card__image" style="background-image: url('img/productos/drone-dji.jpg')"></div>
                         <div class="heart-container">
-                            <button class="card__btn-heart">
-                                <i class="icon-heart"></i> </button>
+                            <div class="card__btn-heart">
+                                <i class="icon-heart"></i>
+                            </div>
                         </div>
                         <div class="card__content">
                             <h3 class="card__heading">Título</h3>
@@ -489,10 +505,9 @@
                         </div>
 
                         <div class="btncomprar-container">
-                            <!-- flex solo presta atencion a sus propios hijos-->
-                            <button class="card__btn-comprar">
+                            <div class="card__btn-comprar">
                                 sumar al carrito
-                            </button>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -500,8 +515,7 @@
         </section>
     </main>
     <footer>
-        <div class="footer-top">
-            <!-- delego en footer top dibujar el background entre body y footer main-->
+        <div class="footer-top"> <!-- delego en footer top dibujar el background entre body y footer main-->
 
         </div>
         <div class="footer-main">
@@ -514,13 +528,14 @@
                         <li>Lorem ipsum dolor sit.</li>
                     </ul>
                 </div>
-                <div class="footer-box__info">
-                    <!--footer-box__info podria ser reempalzo por childs-->
+                <div class="footer-box__info">   <!--footer-box__info podria ser reempalzo por childs-->
                     <h2 class="footer-box__titulo">Info al cliente</h2>
                     <ul class="footer-box__lista">
-                        <a class="footer-box__link-contacto" href="contacto.html">
-                            contactanos
-                        </a>
+                        <li>
+                            <a class="footer-box__link-contacto" href="contacto.html">
+                                contactanos
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-box__info footer-box__contacto">
@@ -539,17 +554,19 @@
                             <span class="footer-box__caract"> (011) </span>
                             <span class="footer-box__tel"> 11.2578.9981 </span>
                         </li>
-                        <div class="footer-box__social">
-                            <a href="https://www.youtube.com/">
-                                <i class="icon-youtube-play"></i>
-                            </a>
-                            <a href="https://www.facebook.com/">
-                                <i class="icon-facebook"></i>
-                            </a>
-                            <a href="https://www.instagram.com/">
-                                <a href=""><i class="icon-instagram"></i></a>
-                            </a>
-                        </div>
+                        <li>
+                            <div class="footer-box__social">
+                                <a href="https://www.youtube.com/">
+                                    <i class="icon-youtube-play"></i>
+                                </a>
+                                <a href="https://www.facebook.com/">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                                <a href="https://www.instagram.com/">
+                                    <i class="icon-instagram"></i>
+                                </a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-box__info footer-box__ofertas">
