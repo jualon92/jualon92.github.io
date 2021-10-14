@@ -1,9 +1,9 @@
 //colores
 $rosado:deeppink; 
 //$violeta:purple;
-$rojo-apagado:hsl(0, 100%, 40%);  
+$rojo-apagado:hsl(0, 100%, 70%);  
 $gris-frio:#515E63;
-$amarillo-vainilla:#FEBD69;
+$amarillo-vainilla:hsl(34, 99%, 70%);
  
 //paletas
 /*
@@ -126,7 +126,7 @@ $color-headerbg:#565656;
   }
 
   &__nav-link:hover, &__nav-link:focus{   //que marque cual elijo  
-    background-color: $rojo-apagado;
+    background-color: #AAA492;
   }
 }
 
