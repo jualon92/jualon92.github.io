@@ -1203,8 +1203,6 @@ input:focus::placeholder {
   gap: 42px;
   margin-top: 6rem;
   margin-bottom: 6rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .presentacion {
@@ -1293,6 +1291,10 @@ input:focus::placeholder {
   .about-nosotros__imagen {
     width: 75%;
     min-width: 100%;
+  }
+  .body-about {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
