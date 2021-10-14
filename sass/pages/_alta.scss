@@ -1,11 +1,37 @@
 .alta-container{
-    width:500px;
+ 
     margin-left:15px;
     margin-bottom: 50px;
 }
  
 .alta-titulo{
     font-size:2.5rem;
-     
-
+    
 }
+
+ 
+@media (min-width:768px){ //768 hacia delante
+    .form-alta{
+        width: 40rem;
+    }
+
+    .alta-container{
+        width:500px;
+         
+    }
+    
+     
+.form-alta__input-datos{
+     
+    margin-left: 155px;
+}
+}
+
+@media (max-width:768px){
+    .alta-container{
+        margin-left:4px;
+    }
+
+     
+}
+    

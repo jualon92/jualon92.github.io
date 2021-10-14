@@ -212,6 +212,12 @@ $tiempo-fade:0.5s;
         }
     }
 
+    @media (max-width:425px){
+        &{
+            min-width: 280px;
+        }
+    }
+
     @media (min-width: 426px) and (max-width: 768px) {
         & {
             min-width: 100%;

@@ -363,6 +363,12 @@ body {
   }
 }
 
+@media (max-width: 425px) {
+  .card {
+    min-width: 280px;
+  }
+}
+
 @media (min-width: 426px) and (max-width: 768px) {
   .card {
     min-width: 100%;
@@ -387,6 +393,7 @@ body {
 .contacto {
   margin-left: 10px;
   margin-top: 20px;
+  margin-bottom: 111px;
 }
 
 .contacto__form {
@@ -1128,13 +1135,30 @@ input:focus::placeholder {
 }
 
 .alta-container {
-  width: 500px;
   margin-left: 15px;
   margin-bottom: 50px;
 }
 
 .alta-titulo {
   font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .form-alta {
+    width: 40rem;
+  }
+  .alta-container {
+    width: 500px;
+  }
+  .form-alta__input-datos {
+    margin-left: 155px;
+  }
+}
+
+@media (max-width: 768px) {
+  .alta-container {
+    margin-left: 4px;
+  }
 }
 
 .body-about {
@@ -1179,6 +1203,8 @@ input:focus::placeholder {
   gap: 42px;
   margin-top: 6rem;
   margin-bottom: 6rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .presentacion {
@@ -1260,6 +1286,16 @@ input:focus::placeholder {
   position: relative;
 }
 
+@media (max-width: 769px) {
+  .contacto__form {
+    margin-right: 80px;
+  }
+  .about-nosotros__imagen {
+    width: 75%;
+    min-width: 100%;
+  }
+}
+
 /*
 .about_historia{
     overflow: hidden; 
@@ -1288,7 +1324,7 @@ input:focus::placeholder {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  width: 40rem;
+  padding-left: 5px;
   height: 40%;
 }
 
@@ -1337,7 +1373,12 @@ input:focus::placeholder {
   padding: 13px;
   margin-top: 5px;
   margin-bottom: 14px;
-  margin-left: 155px;
+  margin-left: 33%;
+  overflow: hidden;
+}
+
+.form-alta__input-foto {
+  max-width: 70%;
 }
 
 @media (max-width: 769px) {
