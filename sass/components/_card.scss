@@ -1,4 +1,20 @@
 $tiempo-fade:0.5s; 
+@mixin desaparecer{
+    border-color:transparent; 
+    //transition se encarga del fade in/fade out por opacity y tambien de visibility(para evitar click)
+    //https://www.taccgl.org/blog/css-transition-opacity-for-fade-effects.html
+    transition: opacity $tiempo-fade ease-in-out , visibility $tiempo-fade;
+    -webkit-transition: opacity $tiempo-fade ease-in-out , visibility $tiempo-fade;
+    -moz-transition:opacity $tiempo-fade ease-in-out ,visibility $tiempo-fade;
+    // transition-delay: 0.2s;
+    opacity: 0;
+    visibility : hidden;
+}
+ 
+.card-placeholder:hover .card__btn-comprar{  
+    visibility: visible;
+    opacity:1;
+}  
 
 .btncomprar-container{ //ordenar!!
     display:flex;
@@ -12,63 +28,43 @@ $tiempo-fade:0.5s;
     -moz-box-shadow: inset 0 0 11px hsla(0, 0%, 0%, 0.4);
     box-shadow: inset 0 0 11px  hsla(0, 0%, 0%, 0.4);
 }
-
-.card__article:hover .card__btn-comprar{  
-    visibility:visible;
-    opacity:1;
-}  
-
-.card__btn-heart i:hover{
-    color:aquamarine;
+ 
+.form-comprar{
+    display:inline;
 }
 
- 
+.form-favorito{
+    position: relative;
+    bottom: 46%;
+}
 
-.card__article:hover .card__btn-heart{  
+.btn-fav{
+    position: relative;
+    bottom: 50%;
+    left: 84%;
+     
+    color:black;
+    background-color: transparent;
+    @include desaparecer; 
+
+    &__icon{
+        color:hsl(0, 0%, 20%);
+        font-size: 20px;
+        padding-right: 10px; 
+         
+        &:hover{
+            color:aquamarine;
+        }
+    }
+
+       
+}
+
+.card-placeholder:hover  .btn-fav{  
     visibility:visible;
     opacity:1
 }  
-
- ///@at-root
-
-
  
-
-.heart-container{
-    display:flex;
-    justify-content: flex-end;
-    margin-top: 33px; // 35ish
-}
-
-
-.card__btn-heart{
-  //  font-size: 20px;
-    /* 
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-     */
-     
-   // padding-right: 10px;
-    color:black;
-    border-color:transparent; 
-    background-color: transparent;
-        //transition se encarga del fade in/fade out por opacity y tambien de visibility(para evitar click)
-        //https://www.taccgl.org/blog/css-transition-opacity-for-fade-effects.html
-        transition: opacity $tiempo-fade ease-in-out , visibility $tiempo-fade;
-        -webkit-transition: opacity $tiempo-fade ease-in-out , visibility $tiempo-fade;
-        -moz-transition:opacity $tiempo-fade ease-in-out ,visibility $tiempo-fade;
-       // transition-delay: 0.2s;
-        opacity: 0;
-        visibility : hidden;
-}
-
-
-.card__btn-heart i{
-    color:hsl(0, 0%, 20%);
-    font-size: 20px;
-    padding-right: 10px;
-}
  
 
 .card {
@@ -92,23 +88,33 @@ $tiempo-fade:0.5s;
     transition: all .2s;
     text-decoration: none; // parent de contenedor flex no tenga underline
 
-    &__btn-comprar{
-        padding:10px 20px 10px 20px;
+    &__btn-comprar{   
+        position: relative;
+        bottom: 4.5%;
+        left:50%;
+        transform: translateX(-50%);
+        /* text-align: center; */
+        /* margin: auto; */
+        /* margin: 0 auto; */
+         
+
+        padding:10px 30px 10px 30px;
         border-radius: 4px;
         border-color:transparent;
         color:white;
         background-color: $naranja-vitamina;
-        
+        //podria ser mixin para c/ boton
         //transition se encarga del fade in/fade out por opacity y tambien de visibility(para evitar click)
         //https://www.taccgl.org/blog/css-transition-opacity-for-fade-effects.html
-        transition: opacity $tiempo-fade ease-in-out , visibility $tiempo-fade;
-        -webkit-transition: opacity $tiempo-fade ease-in-out , visibility $tiempo-fade;
-        -moz-transition:opacity $tiempo-fade ease-in-out ,visibility $tiempo-fade;
-       // transition-delay: 0.2s;
-        opacity: 0;
-        visibility : hidden;
+         @include desaparecer;
 
     }
+    
+    .card-placeholder:hover .card__btn-comprar{  
+        visibility: visible;
+        opacity:1;
+    }  
+
     
     &:hover,
     &:focus {
@@ -152,47 +158,48 @@ $tiempo-fade:0.5s;
     &:hover &__content {
         padding-top: 4em;
     }
-
-    &:nth-child(10n + 1) &__content {
+      
+    &-placeholder:nth-child(10n + 1) &__content { //rever
         background-image: linear-gradient(to top, #b429f9, #26c5f3);
     }
 
-    &:nth-child(10n + 2) &__content {
+    &-placeholder:nth-child(10n + 2) &__content {
         background-image: linear-gradient(to top, #af1239, #cce269);    
     }
 
-    &:nth-child(10n + 3) &__content {
+    &-placeholder:nth-child(10n + 3) &__content {
         background-image: linear-gradient(to top, #0b3866, #3ddab2);    
     }
 
-    &:nth-child(10n + 4) &__content {
+    &-placeholder:nth-child(10n + 4) &__content {
         background-image: linear-gradient(to top, #f40752, #7c65a9);
     }
 
-    &:nth-child(10n + 5) &__content {
+    &-placeholder:nth-child(10n + 5) &__content {
         background-image: linear-gradient(to top, #1c3b41, #69d449);    
     }
 
-    &:nth-child(10n + 6) &__content {
+    &-placeholder:nth-child(10n + 6) &__content {
         background-image: linear-gradient(to top, #0a5df8, #ed2d53);    
     }
 
-    &:nth-child(10n + 7) &__content {
+    &-placeholder:nth-child(10n + 7) &__content {
         background-image: linear-gradient(to top, #661069, #30d26e);    
     }
 
-    &:nth-child(10n + 8) &__content {
+    &-placeholder:nth-child(10n + 8) &__content {
         background-image: linear-gradient(to top, #702b19, #cec360);    
     }
 
-    &:nth-child(10n + 9) &__content {
-        background-image: linear-gradient(to top, #034a66, #ced11a);    
+    &-placeholder:nth-child(10n + 9) &__content {
+        background-image: linear-gradient(to top, #034a66, #ced11a) !important;    
     }
-
-    &:nth-child(10n + 10) &__content {
+     
+    &-placeholder:nth-child(10n + 10) &__content {
         background-image: linear-gradient(to top, #ec458d, #474ed7);    
-    }
-
+    } 
+     
+     
     @media (min-width: 1024px) {
         & {
             min-width: 230px;

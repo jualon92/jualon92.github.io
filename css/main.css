@@ -151,6 +151,11 @@ body {
   animation-name: fadeOut;
 }
 
+.card-placeholder:hover .card__btn-comprar {
+  visibility: visible;
+  opacity: 1;
+}
+
 .btncomprar-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,39 +171,22 @@ body {
   box-shadow: inset 0 0 11px rgba(0, 0, 0, 0.4);
 }
 
-.card__article:hover .card__btn-comprar {
-  visibility: visible;
-  opacity: 1;
+.form-comprar {
+  display: inline;
 }
 
-.card__btn-heart i:hover {
-  color: aquamarine;
+.form-favorito {
+  position: relative;
+  bottom: 46%;
 }
 
-.card__article:hover .card__btn-heart {
-  visibility: visible;
-  opacity: 1;
-}
-
-.heart-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-top: 33px;
-}
-
-.card__btn-heart {
-  /* 
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-     */
+.btn-fav {
+  position: relative;
+  bottom: 50%;
+  left: 84%;
   color: black;
-  border-color: transparent;
   background-color: transparent;
+  border-color: transparent;
   transition: opacity 0.5s ease-in-out, visibility 0.5s;
   -webkit-transition: opacity 0.5s ease-in-out, visibility 0.5s;
   -moz-transition: opacity 0.5s ease-in-out, visibility 0.5s;
@@ -206,10 +194,19 @@ body {
   visibility: hidden;
 }
 
-.card__btn-heart i {
+.btn-fav__icon {
   color: #333333;
   font-size: 20px;
   padding-right: 10px;
+}
+
+.btn-fav__icon:hover {
+  color: aquamarine;
+}
+
+.card-placeholder:hover .btn-fav {
+  visibility: visible;
+  opacity: 1;
 }
 
 .card {
@@ -235,16 +232,30 @@ body {
 }
 
 .card__btn-comprar {
-  padding: 10px 20px 10px 20px;
+  position: relative;
+  bottom: 4.5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  /* text-align: center; */
+  /* margin: auto; */
+  /* margin: 0 auto; */
+  padding: 10px 30px 10px 30px;
   border-radius: 4px;
   border-color: transparent;
   color: white;
   background-color: #FD611A;
+  border-color: transparent;
   transition: opacity 0.5s ease-in-out, visibility 0.5s;
   -webkit-transition: opacity 0.5s ease-in-out, visibility 0.5s;
   -moz-transition: opacity 0.5s ease-in-out, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
+}
+
+.card .card-placeholder:hover .card__btn-comprar {
+  visibility: visible;
+  opacity: 1;
 }
 
 .card:hover, .card:focus {
@@ -290,52 +301,52 @@ body {
   padding-top: 4em;
 }
 
-.card:nth-child(10n + 1) .card__content {
+.card-placeholder:nth-child(10n + 1) .card__content {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#b429f9), to(#26c5f3));
   background-image: linear-gradient(to top, #b429f9, #26c5f3);
 }
 
-.card:nth-child(10n + 2) .card__content {
+.card-placeholder:nth-child(10n + 2) .card__content {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#af1239), to(#cce269));
   background-image: linear-gradient(to top, #af1239, #cce269);
 }
 
-.card:nth-child(10n + 3) .card__content {
+.card-placeholder:nth-child(10n + 3) .card__content {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#0b3866), to(#3ddab2));
   background-image: linear-gradient(to top, #0b3866, #3ddab2);
 }
 
-.card:nth-child(10n + 4) .card__content {
+.card-placeholder:nth-child(10n + 4) .card__content {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f40752), to(#7c65a9));
   background-image: linear-gradient(to top, #f40752, #7c65a9);
 }
 
-.card:nth-child(10n + 5) .card__content {
+.card-placeholder:nth-child(10n + 5) .card__content {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#1c3b41), to(#69d449));
   background-image: linear-gradient(to top, #1c3b41, #69d449);
 }
 
-.card:nth-child(10n + 6) .card__content {
+.card-placeholder:nth-child(10n + 6) .card__content {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#0a5df8), to(#ed2d53));
   background-image: linear-gradient(to top, #0a5df8, #ed2d53);
 }
 
-.card:nth-child(10n + 7) .card__content {
+.card-placeholder:nth-child(10n + 7) .card__content {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#661069), to(#30d26e));
   background-image: linear-gradient(to top, #661069, #30d26e);
 }
 
-.card:nth-child(10n + 8) .card__content {
+.card-placeholder:nth-child(10n + 8) .card__content {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#702b19), to(#cec360));
   background-image: linear-gradient(to top, #702b19, #cec360);
 }
 
-.card:nth-child(10n + 9) .card__content {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#034a66), to(#ced11a));
-  background-image: linear-gradient(to top, #034a66, #ced11a);
+.card-placeholder:nth-child(10n + 9) .card__content {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#034a66), to(#ced11a)) !important;
+  background-image: linear-gradient(to top, #034a66, #ced11a) !important;
 }
 
-.card:nth-child(10n + 10) .card__content {
+.card-placeholder:nth-child(10n + 10) .card__content {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#ec458d), to(#474ed7));
   background-image: linear-gradient(to top, #ec458d, #474ed7);
 }

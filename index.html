@@ -18,7 +18,8 @@
     <header class="main-header">
         <input type="checkbox" id="menu" />
 
-        <nav class="nav-bar"><!-- acomodar con unordered list mas simple para nav links que inline  -->
+        <nav class="nav-bar">
+            <!-- acomodar con unordered list mas simple para nav links que inline  -->
 
             <ul class="nav-bar__nav-list">
                 <li class="nav-bar__nav-item">
@@ -79,443 +80,504 @@
             </header>
 
             <div class="cards-container">
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="
+                <div class="card-placeholder">
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="
                   background-image: url('img/productos/notebook-lenovo.jpg');
                 ">
-                        </div>
-
-                        <!--   <div class="heart-container">  nesting buttons dentro de anchor es poo poo
-                            <a class="card__btn-heart" href="http://example.com/">
-                                <i class="icon-heart"></i>  
-                            </a>  -->
-                        <!-- rever tema de icon clickable, probl sea mejor mediante js(),
-                         html5 no permite nested anchors o button dentro de anchor-->
-
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
                             </div>
-                        </div>
 
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
+
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <!--  <div class="btncomprar-container"> flex solo presta atencion a sus hijos 
-                            <button class="card__btn-comprar">
-                                sumar al carrito
-                            </button> -->
 
-                        <div class="btncomprar-container"> <!--rever tema hacer clickable mediante html-->
-                            <div class="card__btn-comprar">
-                                sumar al carrito
-                            </div>
-                        </div>
+                        </article>
+                    </a>
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
 
-                    </article>
-                </a>
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
 
+                </div>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="
+                <div class="card-placeholder">
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="
                   background-image: url('img/productos/apple-iphone-11-pro-max-liviano.jpg');
                 "></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
-                            </div>
-                        </div>
-                    </article>
-                </a>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="background-image: url('img/productos/camara-canon.jpg')"></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
+                        </article>
+                    </a>
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
+
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+
+                </div>
+
+                <div class="card-placeholder">
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="background-image: url('img/productos/camara-canon.jpg')">
                             </div>
-                        </div>
 
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
+
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </a>
+                        </article>
+                    </a>
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="card-placeholder">
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="
                   background-image: url('img/productos/auriculares-sony.jpg');
                 "></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </a>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="background-image: url('img/productos/parlante-jbl.jpg')"></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
-                            </div>
-                        </div>
-                    </article>
-                </a>
+                        </article>
+                    </a>
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+                </div>
+
+
+                <div class="card-placeholder">
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="background-image: url('img/productos/parlante-jbl.jpg')">
+                            </div>
+
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </article>
+                    </a>
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
+
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="card-placeholder  c">
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="
                   background-image: url('img/productos/google-nest-mini.jpg');
                 "></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </a>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="
+
+                        </article>
+                    </a>
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
+
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="card-placeholder">
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="
                   background-image: url('img/productos/samsung-galaxy-s21-plus-5g.jpg');
                 "></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </a>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="background-image: url('img/productos/drone-dji.jpg')"></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
+                        </article>
+                    </a>
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
 
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
-                            </div>
-                        </div>
-                    </article>
-                </a>
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+                </div>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="
+                <div class="card-placeholder">
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="background-image: url('img/productos/drone-dji.jpg')"></div>
+
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </article>
+                    </a>
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
+
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="card-placeholder">
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="
                   background-image: url('img/productos/notebook-lenovo.jpg');
                 "></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </a>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="
+
+                        </article>
+                    </a>
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
+
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="card-placeholder">
+
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="
                   background-image: url('img/productos/dji-mavic-2-pro.jpg');
                 "></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </a>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="background-image: url('img/productos/camara-canon.jpg')"></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
-                            </div>
-                        </div>
-                    </article>
-                </a>
+                        </article>
+                    </a>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
+
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+
+
+                </div>
+
+                <div class="card-placeholder">
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="background-image: url('img/productos/camara-canon.jpg')">
+                            </div>
+
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </article>
+                    </a>
+
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
+
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+
+
+                </div>
+
+                <div class="card-placeholder">
+
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="
                   background-image: url('img/productos/chromecast-google.jpg');
                 "></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </a>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="background-image: url('img/productos/parlante-jbl.jpg')"></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
-                            </div>
-                        </div>
-                    </article>
-                </a>
+                        </article>
+                    </a>
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+
+
+                </div>
+
+                <div class="card-placeholder">
+
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="background-image: url('img/productos/parlante-jbl.jpg')">
+                            </div>
+
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </article>
+                    </a>
+
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
+
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+
+
+                </div>
+
+                <div class="card-placeholder">
+
+                    <a class="card card1" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="
                   background-image: url('img/productos/google-nest-mini.jpg');
                 "></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
-                            </div>
-                        </div>
 
-                    </article>
-                </a>
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="background-image: url('img/productos/televisor-lg.jpg')"></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
-                            </div>
-                        </div>
-                    </article>
-                </a>
 
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" style="background-image: url('img/productos/drone-dji.jpg')"></div>
-                        <div class="heart-container">
-                            <div class="card__btn-heart">
-                                <i class="icon-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Título</h3>
-                            <div class="card__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
+                        </article>
+                    </a>
 
-                        <div class="btncomprar-container">
-                            <div class="card__btn-comprar">
-                                sumar al carrito
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
+
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+
+
+                </div>
+                <div class="card-placeholder">
+
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="background-image: url('img/productos/televisor-lg.jpg')">
                             </div>
-                        </div>
-                    </article>
-                </a>
+
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </article>
+                    </a>
+
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
+
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+
+
+                </div>
+                <div class="card-placeholder">
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div class="card__image" style="background-image: url('img/productos/drone-dji.jpg')"></div>
+
+                            <div class="card__content">
+                                <h3 class="card__heading">Título</h3>
+                                <div class="card__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </article>
+                    </a>
+
+                    <form class="form-comprar" action="www.google.com">
+                        <button class="card__btn-comprar">sumar al carrito</button>
+                    </form>
+
+                    <form class="form-favorito" action="www.google.com">
+                        <button class="btn-fav">
+                            <i class="btn-fav__icon icon-heart"></i>
+                        </button>
+                    </form>
+
+
+                </div>
             </div>
         </section>
     </main>
     <footer>
-        <div class="footer-top"> <!-- delego en footer top dibujar el background entre body y footer main-->
+        <div class="footer-top">
+            <!-- delego en footer top dibujar el background entre body y footer main-->
 
         </div>
         <div class="footer-main">
@@ -528,7 +590,8 @@
                         <li>Lorem ipsum dolor sit.</li>
                     </ul>
                 </div>
-                <div class="footer-box__info">   <!--footer-box__info podria ser reempalzo por childs-->
+                <div class="footer-box__info">
+                    <!--footer-box__info podria ser reempalzo por childs-->
                     <h2 class="footer-box__titulo">Info al cliente</h2>
                     <ul class="footer-box__lista">
                         <li>
