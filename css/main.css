@@ -1288,10 +1288,6 @@ input:focus::placeholder {
   .contacto__form {
     margin-right: 80px;
   }
-  .about-nosotros__imagen {
-    width: 75%;
-    min-width: 100%;
-  }
   .txt-mid__container, .presentacion__contenido-flex {
     -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
@@ -1301,6 +1297,10 @@ input:focus::placeholder {
         flex-wrap: wrap;
     margin-left: 15px;
     margin-right: 15px;
+  }
+  .about-nosotros__texto {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
   }
   .about-nosotros__texto-container {
     display: -webkit-box;
@@ -1314,16 +1314,16 @@ input:focus::placeholder {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .about-nosotros__texto {
-    -ms-flex-preferred-size: 90%;
-        flex-basis: 90%;
+  .about-nosotros____imagen {
+    width: 75%;
+    min-width: 100%;
   }
-  /*
+}
+
+/*
     .presentacion__contenido-flex{
         min-width: 200px;
     }*/
-}
-
 /*
 .about_historia{
     overflow: hidden; 

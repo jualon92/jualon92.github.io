@@ -115,12 +115,9 @@
        
       margin-right: 80px; // 60 + 20padding: 80px
     }
-
-    .about-nosotros__imagen{
-        width: 75%;
-        min-width: 100%;
+ 
          
-    }
+     
     .txt-mid__container, .presentacion__contenido-flex  {
         flex-basis:90%;
     }
@@ -129,24 +126,33 @@
         margin-left:15px;
         margin-right: 15px;
 
-    }
+        &__texto{
+            flex-basis: 90%;
+        }
 
-    .about-nosotros__texto-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
+        &__texto-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
 
-    .about-nosotros__texto{
-        flex-basis: 90%;
+        &____imagen{
+            width: 75%;
+            min-width: 100%;
+        }
     }
+}
+
+     
+
+    
 
      
      /*
     .presentacion__contenido-flex{
         min-width: 200px;
     }*/
-  }
+  
 
  
 
