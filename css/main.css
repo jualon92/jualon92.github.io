@@ -519,7 +519,6 @@ body {
 .nav-bar__nav-link {
   /*inline no muestra padding top padding bottom*/
   display: block;
-  color: #fff;
   padding: 1em 2em;
   text-decoration: none;
   color: white;
