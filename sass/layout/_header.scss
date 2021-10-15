@@ -1,3 +1,4 @@
+ 
 //colores
 $rosado:deeppink; 
 //$violeta:purple;
@@ -5,7 +6,7 @@ $rojo-apagado:hsl(0, 100%, 70%);
 $gris-frio:#515E63;
 $amarillo-vainilla:hsl(34, 99%, 70%);
 $gris-oscuro:hsl(0, 0%, 24%);
- 
+
 $natura-colores: (
   'color-header':#515E63, 
   'color-headerbg': #515E63,
@@ -22,12 +23,11 @@ $naranja-gris: (
  
 $mapa-gris: (
   'color-header':white,
-  'color-headerbg':$gris-oscuro,
+  'color-headerbg':$gris-nublado,
   'searchbar-primary':hsl(197, 10%, 65%),
   'color-buscar':hsl(197, 10%, 55%),
 );
 
- 
 
 //me gusta la idea de poder cambiar de paletas ya declaradas en mapas (key:elemento, value:color) 
 @function get-color($key) { //toma "color-header", busca su color en el mapa guardada en var $paleta-seleccion,y devuelve key color
