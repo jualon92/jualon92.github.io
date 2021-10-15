@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap");
- 
+@import url(c:\Users\Juan\IdeaProjects\jualon92.github.io\sass\vendors\fontello-dabf156c\css\fontello.css);
 *,
 *::after,
 *::before {
@@ -41,7 +41,7 @@ body {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
-   
+  speak: never;
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
@@ -467,44 +467,6 @@ body {
   }
 }
 
-/*
-$mapa-paletas: ( //puede hacerce un map que guarda las paletas como map dentro, pero me parece un dolor de cabeza
-  "natura-colores":(
-    'color-header':$gris-frio, 
-    'color-headerbg': $gris-frio,
-    'searchbar-primary': #C9D8B6,
-    'color-buscar': #F1ECC3,
-  ),
-  "naranja-gris": (
-    'color-header':$naranja-vitamina,
-    'color-headerbg':$naranja-vitamina,
-    'searchbar-primary':hsl(197, 10%, 65%),
-    'color-buscar':hsl(197, 10%, 55%),
-  )
-);
-*/
-/*
-$color-header:#515E63; 
-$color-headerbg:#515E63;
-//$searchbar-primary:#F1F7E7;
-$searchbar-primary:#C9D8B6;  
-$color-buscar:#F1ECC3; 
- /*
-$color-header:#FD611A;  
-$color-headerbg:#565656;
- searchbar-primary:hsl(197, 10%, 65%); 
- */
-/*********************************
-            HEADER
-*********************************/
-/*
-*{
-  text-decoration:none;
-  outline: none;;
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 500;
-    letter-spacing: 0.02em; 
-}*/
 .main-header, .header-nos {
   /*flex permite reacomodar flow al bajar resolucion mediante media */
   display: -webkit-box;
@@ -540,7 +502,7 @@ $color-headerbg:#565656;
               NAV BAR
   *********************************/
 .nav-bar {
-  background-color: #515E63;
+  background-color: #575757;
 }
 
 .nav-bar__nav-list {
@@ -571,7 +533,7 @@ $color-headerbg:#565656;
               SEARCH BAR
   *********************************/
 .search-bar {
-  background-color: #C9D8B6;
+  background-color: #9daaaf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -608,7 +570,7 @@ $color-headerbg:#565656;
 }
 
 .search-bar__form-label {
-  background-color: #F1ECC3;
+  background-color: #819198;
   padding-right: 0.4rem;
 }
 

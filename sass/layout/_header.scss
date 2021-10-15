@@ -4,24 +4,7 @@ $rosado:deeppink;
 $rojo-apagado:hsl(0, 100%, 70%);  
 $gris-frio:#515E63;
 $amarillo-vainilla:hsl(34, 99%, 70%);
- 
-//paletas
-/*
-$mapa-paletas: ( //puede hacerce un map que guarda las paletas como map dentro, pero me parece un dolor de cabeza
-  "natura-colores":(
-    'color-header':$gris-frio, 
-    'color-headerbg': $gris-frio,
-    'searchbar-primary': #C9D8B6,
-    'color-buscar': #F1ECC3,
-  ),
-  "naranja-gris": (
-    'color-header':$naranja-vitamina,
-    'color-headerbg':$naranja-vitamina,
-    'searchbar-primary':hsl(197, 10%, 65%),
-    'color-buscar':hsl(197, 10%, 55%),
-  )
-);
-*/ 
+$gris-oscuro:hsl(0, 0%, 34%);
  
 $natura-colores: (
   'color-header':#515E63, 
@@ -31,49 +14,31 @@ $natura-colores: (
 );
  
 $naranja-gris: (
-  'color-header':#FD611A,
-  'color-headerbg':#FD611A,
+  'color-header':hsl(16, 100%, 50%),
+  'color-headerbg':hsl(16, 100%, 30%),
   'searchbar-primary':hsl(197, 10%, 65%),
   'color-buscar':hsl(197, 10%, 55%),
 );
  
+$mapa-gris: (
+  'color-header':$gris-oscuro,
+  'color-headerbg':$gris-oscuro,
+  'searchbar-primary':hsl(197, 10%, 65%),
+  'color-buscar':hsl(197, 10%, 55%),
+);
+
+ 
+
 //me gusta la idea de poder cambiar de paletas ya declaradas en mapas (key:elemento, value:color) 
 @function get-color($key) { //toma "color-header", busca su color en el mapa guardada en var $paleta-seleccion,y devuelve key color
   @return map-get($paleta-seleccion, $key);
- // $map: map-get($mapa-paletas, $paleta-seleccion); //busca key paleta a utilizar
- // @return map-get($map, &key); // devuelve el color del map
+ 
 } 
 
 //// con cambiar paleta seleccion basta
-$paleta-seleccion: $natura-colores; //guarda el mapa a utilizar por get-color,mas facil cambiar entre paletas
+$paleta-seleccion: $mapa-gris; //guarda el mapa a utilizar por get-color,mas facil cambiar entre paletas
  
-
-//para mas facil cambiar colores mientras encuentro una paleta, 
-//podria utilizarse un map para cambiar entre diferentes paletas
-/*
-$color-header:#515E63; 
-$color-headerbg:#515E63;
-//$searchbar-primary:#F1F7E7;
-$searchbar-primary:#C9D8B6;  
-$color-buscar:#F1ECC3; 
- /*
-$color-header:#FD611A;  
-$color-headerbg:#565656;
- searchbar-primary:hsl(197, 10%, 65%); 
- */
-
-
-/*********************************
-            HEADER
-*********************************/
- /*
-*{
-  text-decoration:none;
-  outline: none;;
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 500;
-    letter-spacing: 0.02em; 
-}*/
+ 
 .main-header {/*flex permite reacomodar flow al bajar resolucion mediante media */
   display: flex;
   flex-direction: column;
