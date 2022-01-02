@@ -10,7 +10,7 @@ $letra-normal:em(10); // funcion para devolver conversion de px a em, los valore
 $margen-centrado:15%; // si se quiere cambiar margen de footer main y bottom con cambiar esto seria suf, interface
 
 .footer-top{
-    background-color: $gris-claro;
+    background-color: $gris-claro;  
     height:2.2rem;
     display:block;
 }
@@ -23,10 +23,11 @@ $margen-centrado:15%; // si se quiere cambiar margen de footer main y bottom con
 
 
 .footer-main{ /* basado en https://www.armytech.com.ar/ footer main */
-    background-color: $gris-nublado;
+    //background-color:  $gris-nublado; //no tiene suficiente contraste
+    background-color:$gris-oscuro;
    // width:100%;
-    padding-top:2%;
-    padding-bottom:2%;
+    padding-top:2.5%; //un poco mas alto
+    padding-bottom:2.5%;
     
     
     font-family: "Rajdhani", sans-serif; /* font candidato var o clase, en carpeta typo*/
