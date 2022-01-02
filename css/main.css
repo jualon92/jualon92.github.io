@@ -675,6 +675,10 @@ body {
   height: 100%;
 }
 
+.menu-toggle__label:hover {
+  background-color: #8a8061;
+}
+
 .menu-toggle__pan-arriba, .menu-toggle__medallon, .menu-toggle__pan-abajo {
   display: block;
   background-color: #333;
@@ -885,7 +889,7 @@ body {
 }
 
 .footer-box__horario, .footer-box__tel, .footer-box__caract {
-  color: #FD8A2F;
+  color: #FD611A;
 }
 
 .footer-box__tel {
@@ -911,6 +915,10 @@ body {
   width: 90%;
 }
 
+.footer-box__login:hover {
+  background: #a79a9a;
+}
+
 .footer-box__btn-enviar {
   margin: 0 auto;
   background-color: white;
@@ -925,6 +933,13 @@ body {
 
 .footer-box__social a {
   text-decoration: none;
+}
+
+.footer-box__social a:hover {
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-filter: brightness(125%);
+          filter: brightness(125%);
 }
 
 input::-webkit-input-placeholder {

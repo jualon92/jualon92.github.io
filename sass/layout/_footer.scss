@@ -15,7 +15,7 @@ $margen-centrado:15%; // si se quiere cambiar margen de footer main y bottom con
     display:block;
 }
 
-//i{   aplica a todos los iconos al sass crear main.css , mala practica
+//i{   aplica a todos los iconos al sass crear main.css, rever
 .footer-box__social i{
     color:#D4D4D4;
     font-size:2rem;
@@ -83,7 +83,7 @@ $margen-centrado:15%; // si se quiere cambiar margen de footer main y bottom con
     }
 
     &__horario, &__tel, &__caract{
-        color:$color-naranjish;
+        color:$naranja-vitamina;
     }
 
     &__tel{
@@ -107,7 +107,10 @@ $margen-centrado:15%; // si se quiere cambiar margen de footer main y bottom con
         border-style:none;
         height:25px;
         width:90%;
-    }
+        &:hover{
+            background:  rgb(167, 154, 154);
+        }
+    }  
 
     &__btn-enviar{ //btn-enviar
          
@@ -124,7 +127,13 @@ $margen-centrado:15%; // si se quiere cambiar margen de footer main y bottom con
 
     &__social a{
         text-decoration: none;
+        &:hover{
+            transition: 0.8s; //vel
+            filter:brightness(125%)
+        }
     }
+
+    
 
 
 }

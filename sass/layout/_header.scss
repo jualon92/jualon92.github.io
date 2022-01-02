@@ -217,6 +217,9 @@ $paleta-seleccion: $mapa-gris; //guarda el mapa a utilizar por get-color,mas fac
   &__label {
     display: block;
     background-color: black;
+    &:hover{
+      background-color: #8a8061;
+    }
     width: 100%;
     height: 100%;
   }
