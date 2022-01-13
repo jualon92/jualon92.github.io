@@ -1,4 +1,4 @@
-eCommerce, SPA con js vanilla. utiliza handlebars
+eCommerce, SPA con js vanilla. utiliza handlebars y ajax
 
 1. la informacion de la carta es pedida a mock api mediante ajax. Luego es renderizada, se utiliza handlebars para el html de cada carta. (ventajas:mantiene coloreado, separa logica js de html)
 
