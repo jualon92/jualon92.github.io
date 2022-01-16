@@ -28,7 +28,7 @@ class Http {
     /* PUT */
     async put(url, id, dato) {
         try {
-            return await fetch(url + id, {
+            return await fetch(url + "/" +  id, {
                 method: 'put',
                 body: JSON.stringify(dato),
                 headers: { 'content-type': 'application/json' }

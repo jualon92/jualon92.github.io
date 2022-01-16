@@ -14,6 +14,9 @@ class ProductoService { //comunicarse con api
     }
 
     async actualizarProductoService(id,producto) {
+        console.log("hola")
+        console.log(id,producto)
+        console.log(this.URL_PRODUCTOS)
         let productoActualizado = await http.put(this.URL_PRODUCTOS, id, producto)
         //console.log(productoActualizado)
         return productoActualizado

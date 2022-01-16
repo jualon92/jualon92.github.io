@@ -33,7 +33,7 @@ class CarritoController extends CarritoModel {
         localStorage.setItem('carrito', JSON.stringify(this.carrito)) //guardado local
     }
 
-    agregarAlCarritoSuma(producto,contador) { // if contador == null usar 1 , else usar contador
+    agregarAlCarritoSuma(producto,contador) { // if contador == null usar 1 , else usar contador . Utilizado en sumar al carrito con numero
         //console.log(producto)
         if(!this.elProductoEstaEnElCarrito(producto)) { // primer prod
             producto.cantidad = contador
