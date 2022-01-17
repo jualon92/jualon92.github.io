@@ -7,6 +7,63 @@
  
  
 
+.contenedor-btn-suma{
+    position: relative;
+    bottom: 25%;
+    left: 50%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+     
+    border:1px solid #e6e6e6;
+    align-items: center;
+    width: 100px;
+    padding:5px;
+    background-color: white;
+    border-radius:4px;
+}
+
+ 
+.btn-cant{
+    padding:6px;
+    border-color: transparent;
+    background-color: white;
+     
+}
+ 
+.btn-sumar{
+   margin-right: 3px;
+}
+
+.btn-sustraer{
+    margin-left: 3px;
+}
+
+.letra-push{
+     
+    font-size:133%;
+     color:hsl(0, 0%, 20%);
+    font-variant-caps: titling-caps;
+    font-style:italic;
+    padding:4px;
+    width: 80%;
+    margin-top:-10px;
+    border-style:solid;
+    border-color:transparent;
+    border-bottom-color:hsl(0, 100%, 90%);
+    border-radius:0;
+    margin-bottom:15px
+
+}
+
+.carta-push{
+    border-style:dashed;
+    border-color:hsl(0, 100%, 30%); 
+    border-width: thick;
+    border-radius:4px;
+}
+
+
 
 .cards-container {
     display: flex;

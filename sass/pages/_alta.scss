@@ -27,6 +27,17 @@
 }
 }
 
+.notificacion{
+    display:none;
+    border: 1px solid grey;
+    padding:5px;
+    color: black;
+    margin: 2px 0 10px 0;
+    border-radius: 5px;
+    margin-left: 26px;
+}
+
+
 @media (max-width:768px){
     .alta-container{
         margin-left:4px;
@@ -35,3 +46,8 @@
      
 }
     
+//mensaje mal input
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+  }
