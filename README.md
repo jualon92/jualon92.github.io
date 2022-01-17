@@ -16,7 +16,7 @@
 - el carrito se accede presionando el simbolo de carrito, apretar afuera o esperar cierto tiempo lo vuelve invisible
 - al presionar agregar a carrito se agrega 1 a la cantidad de productos en el carrito
 - posibilidad de añadir mas de una compra a la vez mediante botones - y + en cada carta. Si quiero comprar 10 cables, no tengo que presionar 10 veces el boton 
-Agregar al carrito mas que el stock disponible no aumenta la cantidad en carrito
+- Agregar al carrito mas que el stock disponible no aumenta la cantidad en carrito
 
  
  
