@@ -39,16 +39,21 @@ class CarritoController extends CarritoModel {
             producto.cantidad = contador
             this.carrito.push(producto)
         }
-        else { //falta utilizar validacion js
+        else { 
             let productoDeCarrito = this.obtenerProductoDeCarrito(producto)
             console.log(productoDeCarrito)
             console.log("productos iniciales = " + productoDeCarrito.cantidad)
             let suma  = parseInt(productoDeCarrito.cantidad) + parseInt(contador)
             let resta = suma -  parseInt(productoDeCarrito.cantidad)
+            let total = productoDeCarrito.cantidad + suma
+            if (total > productoDeCarrito.stock){ //si la suma es mayor al maximo, cantidad es el maximo
+                productoDeCarrito.cantidad = productoDeCarrito.stock
+            }else{  
             productoDeCarrito.cantidad = suma
             console.log("productos finales = " + suma)
             console.log("diferencia " + resta)
             console.log("agregado al carrito n prod mas: " + contador )
+        }
         }   
     
         localStorage.setItem('carrito', JSON.stringify(this.carrito)) //guardado local
