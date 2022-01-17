@@ -6,27 +6,30 @@
             <th>Stock</th>
             <th>Marca</th>
             <th>Categoria</th>
-            <th>Detalles</th>
             <th>Foto</th>
+            <th>Detalles</th>
+             
             <th>Envio</th>
             <th>Acción</th>
         </tr>
         {{#each productos}}
             <tr>
                 <td class="primerSel">{{nombre}}</td>
-                <td>{{precio}}</td>
-                <td>{{stock}}</td>
-                <td>{{marca}}</td>
-                <td>{{categoria}}</td>
-                <td>{{detalles}}</td>
-                <td>
-                    <img style="display:block; margin: 0 auto;" src="{{foto}}" width="50" alt="{{nombre}}"> 
+                <td class="primerSel">{{precio}}</td>
+                <td class="primerSel">{{stock}}</td>
+                <td class="primerSel">{{marca}}</td>
+                <td class="primerSel">{{categoria}}</td>
+                 
+                <td class="primerSel">
+                    <img class="imagenAlta"  style="display:block; margin: 0 auto;" src="{{foto}}" width="50" alt="{{nombre}}"> 
                 </td>
+                  <td class="primerSel">{{detalles}}</td>
                 {{#if envio}}
-                    <td>Si</td>
+                    <td class="primerSel" >Si</td>
                 {{else}}
-                    <td>No</td>
+                    <td class="primerSel">No</td>
                 {{/if}}
+               
                 <td>
                  
                         <button class="inactive" onclick="productoController.actualizarProducto({{id}},this)">Actualizar</button>

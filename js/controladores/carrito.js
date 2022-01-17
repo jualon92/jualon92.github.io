@@ -39,7 +39,7 @@ class CarritoController extends CarritoModel {
             producto.cantidad = contador
             this.carrito.push(producto)
         }
-        else {
+        else { //falta utilizar validacion js
             let productoDeCarrito = this.obtenerProductoDeCarrito(producto)
             console.log(productoDeCarrito)
             console.log("productos iniciales = " + productoDeCarrito.cantidad)
